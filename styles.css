@@ -19,8 +19,8 @@
 @font-face{font-family:'Inter Tight';font-style:normal;font-weight:700;font-display:swap;src:url(assets/fonts/InterTight-latin-1bf6b3.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
 
 :root{
-  --bg:#EEF2F5; --white:#fff; --soft:#F6F8FA; --ink:#0D1218; --muted:#46505B; --line:#D5DDE4;
-  --dark:#0D1620; --dark2:#16222E; --dline:#283746; --dmuted:#A8B4C0;
+  --bg:#EDF3FA; --white:#fff; --soft:#F5F8FC; --ink:#0A1424; --muted:#44505F; --line:#D3DDE8;
+  --dark:#0A1B30; --dark2:#11263F; --dline:#24395A; --dmuted:#A9B8CC;
   --blue:#0183F9; --blue-d:#0062CF; --blue-l:#5AB0FF; --wa:#0B7A3E;
   --fd:"Inter Tight","Segoe UI",sans-serif;
   --fb:"Golos Text","Segoe UI",system-ui,sans-serif;
@@ -83,7 +83,7 @@ ul,ol{list-style:none}
 .mmenu-btns .btn{min-height:52px}
 
 /* герой: окно */
-.hero{padding:clamp(36px,6vh,72px) 0 clamp(48px,8vh,96px);background:linear-gradient(180deg,#fff 0%,var(--bg) 100%)}
+.hero{padding:clamp(36px,6vh,72px) 0 clamp(48px,8vh,96px);background:radial-gradient(60% 70% at 78% 45%,#D9E8FA 0%,rgba(217,232,250,0) 70%),linear-gradient(180deg,#fff 0%,var(--bg) 100%)}
 .hero-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,80px);align-items:center}
 .kicker{display:flex;align-items:center;gap:10px;font:600 13px/1.3 var(--fb);letter-spacing:.08em;text-transform:uppercase;color:var(--blue-d);margin-bottom:18px}
 .kicker::before{content:"";width:10px;height:10px;background:var(--blue);clip-path:polygon(50% 0,100% 100%,0 100%);flex-shrink:0}
@@ -114,6 +114,13 @@ ul,ol{list-style:none}
 .sec{padding:clamp(64px,9vw,112px) 0}
 .sec-white{background:var(--white)}
 .sec-dark{background:var(--dark);color:#fff}
+.sec-blue{background:linear-gradient(135deg,#0068D9 0%,#004AA6 100%);color:#fff}
+.sec-blue .kicker{color:#fff}
+.sec-blue .kicker::before{background:#fff}
+.sec-blue .lead,.sec-blue .price-k{color:#DCEBFF}
+.sec-blue .price{border-top-color:rgba(255,255,255,.28)}
+.sec-blue .price-num .num{color:#fff}
+.sec-blue .ticks svg{color:#fff}
 .head{margin-bottom:clamp(30px,4vw,48px)}
 .head-row{display:flex;justify-content:space-between;align-items:flex-end;gap:24px}
 .h2{font:700 clamp(30px,3.6vw,52px)/1.1 var(--fd);letter-spacing:-.022em}
@@ -191,9 +198,11 @@ ul,ol{list-style:none}
 .why-c+.why-c{padding-left:24px;border-left:1px solid var(--line)}
 .why-c i{display:grid;place-items:center;width:46px;height:46px;border-radius:8px;background:#E3EFFD;color:var(--blue-d);margin-bottom:20px}
 .why-c p{margin-top:8px;color:var(--muted);font-size:15px}
-.biz{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:36px;padding:30px 32px;border-radius:var(--r);background:var(--blue-d);color:#fff;scroll-margin-top:calc(var(--hdr) + 24px)}
+.biz{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:36px;padding:30px 32px;border-radius:var(--r);background:var(--dark);color:#fff;scroll-margin-top:calc(var(--hdr) + 24px)}
 .biz .h3{font:700 24px/1.2 var(--fd);letter-spacing:-.02em}
-.biz p{margin-top:6px;color:#DCEBFF}
+.biz p{margin-top:6px;color:var(--dmuted)}
+.biz .btn-white{background:var(--blue-d);color:#fff}
+.biz .btn-white:hover{background:#0052B0}
 
 /* как работаем */
 .steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}

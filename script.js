@@ -14,7 +14,7 @@
   var RU = {}, RUA = {}, lang = 'ru';
   i18nEls.forEach(function (e) { var k = e.getAttribute('data-i18n'); if (!(k in RU)) RU[k] = e.innerHTML; });
   ariaEls.forEach(function (e) { RUA[e.getAttribute('data-i18n-aria')] = e.getAttribute('aria-label'); });
-  var FORM_RU = { head: 'Здравствуйте! Заявка с сайта ADM Service.', name: 'Имя', phone: 'Телефон', what: 'Что требуется' };
+  var FORM_RU = { head: 'Здравствуйте! Заявка с сайта ADM.', name: 'Имя', phone: 'Телефон', what: 'Что требуется' };
   function dict() { return lang === 'kk' ? (window.SITE_KK || {}) : {}; }
   function tr(k, fallback) { var d = dict(); return d[k] || fallback; }
   function setWa() {
