@@ -17,7 +17,7 @@
 <link rel="preload" href="assets/fonts/UbuntuSans-cyrillic-7d824c.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/GolosText-cyrillic-f57bdd.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/photos/arch-62.webp" as="image" fetchpriority="high">
-<link rel="stylesheet" href="styles.css?v=20261123-11">
+<link rel="stylesheet" href="styles.css?v=20261123-12">
 <link rel="canonical" href="https://songokura.github.io/adm/">
 <meta property="og:url" content="https://songokura.github.io/adm/">
 <meta name="twitter:card" content="summary_large_image">
@@ -93,6 +93,7 @@
 
 <!-- ГЕРОЙ -->
 <section class="hero" id="top">
+  <picture class="hero-bg" aria-hidden="true"><source media="(max-width:639px)" srcset="assets/photos/hero-bg-m.webp"><img src="assets/photos/hero-bg.webp" alt="" width="1600" height="900"></picture>
   <div class="wrap hero-in">
     <div class="hero-txt">
       <p class="kicker" data-i18n="hero.kicker">Астана · окна и двери ПВХ и алюминия</p>
@@ -305,11 +306,14 @@
       <p class="kicker" data-i18n="k.kicker">Компания</p>
       <h2 class="h2" data-i18n="k.h2">Кто приедет</h2>
     </header>
-    <div class="why">
-      <div class="why-c"><i><svg width="24" height="24"><use href="#ic-team"/></svg></i><h3 class="h3" data-i18n="k.1t">Свои мастера</h3><p data-i18n="k.1">Свои инженеры и три бригады</p></div>
-      <div class="why-c"><i><svg width="24" height="24"><use href="#ic-doc"/></svg></i><h3 class="h3" data-i18n="k.2t">Форма и документы</h3><p data-i18n="k.2">Мастер в фирменной одежде, документы компании - при себе</p></div>
-      <div class="why-c"><i><svg width="24" height="24"><use href="#ic-shield"/></svg></i><h3 class="h3" data-i18n="k.3t">Гарантия до 5 лет</h3><p data-i18n="k.3">От 6 месяцев до 5 лет, сроки - 2-7 рабочих дней</p></div>
-      <div class="why-c"><i><svg width="24" height="24"><use href="#ic-clean"/></svg></i><h3 class="h3" data-i18n="k.4t">Чисто после работ</h3><p data-i18n="k.4">Убираем рабочее место и вывозим мусор</p></div>
+    <div class="who">
+      <figure class="who-ph"><img src="assets/photos/k-75.webp" alt="Бригада ADM в фирменной одежде на объекте" width="640" height="800" loading="lazy"><figcaption class="note" data-i18n="n.who">наша бригада на объекте</figcaption></figure>
+      <div class="why">
+        <div class="why-c c1"><i><svg width="24" height="24"><use href="#ic-team"/></svg></i><h3 class="h3" data-i18n="k.1t">Свои мастера</h3><p data-i18n="k.1">Свои инженеры и три бригады</p></div>
+        <div class="why-c c3"><i><svg width="24" height="24"><use href="#ic-doc"/></svg></i><h3 class="h3" data-i18n="k.2t">Форма и документы</h3><p data-i18n="k.2">Мастер в фирменной одежде, документы компании - при себе</p></div>
+        <div class="why-c c6"><i><svg width="24" height="24"><use href="#ic-shield"/></svg></i><h3 class="h3" data-i18n="k.3t">Гарантия до 5 лет</h3><p data-i18n="k.3">От 6 месяцев до 5 лет, сроки - 2-7 рабочих дней</p></div>
+        <div class="why-c c5"><i><svg width="24" height="24"><use href="#ic-clean"/></svg></i><h3 class="h3" data-i18n="k.4t">Чисто после работ</h3><p data-i18n="k.4">Убираем рабочее место и вывозим мусор</p></div>
+      </div>
     </div>
     <div class="biz" id="organizaciyam">
       <div>
@@ -329,10 +333,10 @@
       <h2 class="h2" data-i18n="o.h2">Как работаем</h2>
     </header>
     <ol class="steps">
-      <li><span class="n">01</span><h3 class="h3" data-i18n="o.1t">Заявка</h3><p data-i18n="o.1d">Оператор ответит за 10-15 минут</p></li>
-      <li><span class="n">02</span><h3 class="h3" data-i18n="o.2t">Осмотр и расчёт</h3><p data-i18n="o.2d">Инженер приедет в день обращения, бесплатно</p></li>
-      <li><span class="n">03</span><h3 class="h3" data-i18n="o.3t">Работы</h3><p data-i18n="o.3d">От 2 до 7 рабочих дней</p></li>
-      <li><span class="n">04</span><h3 class="h3" data-i18n="o.5t">Гарантия</h3><p data-i18n="o.5d">От 6 месяцев до 5 лет</p></li>
+      <li class="c1"><span class="n">01</span><b class="big" data-i18n="o.1v">10-15 мин</b><h3 class="h3" data-i18n="o.1t">Заявка</h3><p data-i18n="o.1d">Оператор ответит за 10-15 минут</p></li>
+      <li class="c2"><span class="n">02</span><b class="big">0&nbsp;₸</b><h3 class="h3" data-i18n="o.2t">Осмотр и расчёт</h3><p data-i18n="o.2d">Инженер приедет в день обращения, бесплатно</p></li>
+      <li class="c4"><span class="n">03</span><b class="big" data-i18n="o.3v">2-7 дней</b><h3 class="h3" data-i18n="o.3t">Работы</h3><p data-i18n="o.3d">От 2 до 7 рабочих дней</p></li>
+      <li class="c6"><span class="n">04</span><b class="big" data-i18n="o.5v">до 5 лет</b><h3 class="h3" data-i18n="o.5t">Гарантия</h3><p data-i18n="o.5d">От 6 месяцев до 5 лет</p></li>
     </ol>
   </div>
 </section>
@@ -387,6 +391,6 @@
 <script src="assets/vendor/gsap.min.js" defer></script>
 <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
 <script src="assets/vendor/lenis.min.js" defer></script>
-<script src="script.js?v=20261123-11" defer></script>
+<script src="script.js?v=20261123-12" defer></script>
 </body>
 </html>
