@@ -120,17 +120,6 @@
   /* ---------- объекты: лента, стрелки, шторка ---------- */
   (function cases() {
     var box = $('.cases'); if (!box) return;
-    var prev = $('#obekty .arr.prev'), next = $('#obekty .arr.next'), items = $$('.case', box);
-    function step() { var c = items[0]; return c.getBoundingClientRect().width + parseFloat(getComputedStyle(box).columnGap || 20); }
-    function upd() {
-      var max = box.scrollWidth - box.clientWidth - 2;
-      prev.disabled = box.scrollLeft <= 2; next.disabled = box.scrollLeft >= max;
-      $('.arrows').hidden = max <= 0;
-    }
-    prev.addEventListener('click', function () { box.scrollBy({ left: -step(), behavior: RM ? 'auto' : 'smooth' }); });
-    next.addEventListener('click', function () { box.scrollBy({ left: step(), behavior: RM ? 'auto' : 'smooth' }); });
-    box.addEventListener('scroll', upd, { passive: true }); window.addEventListener('resize', upd); upd();
-    box.addEventListener('keydown', function (e) { if (e.target !== box) return; if (e.key === 'ArrowRight') { e.preventDefault(); next.click(); } if (e.key === 'ArrowLeft') { e.preventDefault(); prev.click(); } });
     $$('.cmp-r', box).forEach(function (r) {
       var cmp = r.parentNode;
       r.addEventListener('input', function () { r.touched = true; cmp.style.setProperty('--p', r.value + '%'); });
