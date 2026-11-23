@@ -153,13 +153,19 @@ html[lang="kk"] .h1{letter-spacing:-.01em}
 .go{flex-shrink:0;display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--ink);color:#fff;transition:transform .3s var(--ease),background-color .3s}
 
 /* ремонт */
-.fix-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.fix{position:relative;display:flex;flex-direction:column;gap:8px;min-height:170px;padding:26px 26px 76px;background:var(--card);border:1px solid var(--line);border-radius:var(--r);transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .35s}
-.fix p{color:var(--muted);font-size:15px}
-.fix .go{position:absolute;right:20px;bottom:20px}
-.fix::before{content:"";position:absolute;left:26px;top:0;width:40px;height:3px;border-radius:0 0 3px 3px;background:var(--blue)}
+.fix-wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:20px;align-items:stretch}
+.fix-ph{position:relative;border-radius:var(--r);overflow:hidden;background:var(--bg2);min-height:100%}
+.fix-ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.fix-ph figcaption{position:absolute;left:16px;bottom:16px;padding:8px 12px;border-radius:999px;background:rgba(15,17,20,.82);color:#fff;font:600 11px/1 var(--fb);letter-spacing:.1em;text-transform:uppercase}
+.fix-grid{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.fix{position:relative;display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto auto;column-gap:16px;align-items:center;padding:20px 24px;border-top:1px solid var(--line);transition:background-color .25s}
+.fix:first-child{border-top:0}
+.fix .h3{grid-column:1}
+.fix p{grid-column:1;margin-top:3px;color:var(--muted);font-size:15px}
+.fix .go{grid-column:2;grid-row:1/3}
 @media (hover:hover){
-  .fix:hover,.prod:hover{transform:translateY(-4px);box-shadow:0 22px 40px -24px rgba(14,16,19,.35);border-color:#c4c4bd}
+  .fix:hover{background:#F7F7F4}
+  .prod:hover{transform:translateY(-4px);box-shadow:0 22px 40px -24px rgba(14,16,19,.35);border-color:#c4c4bd}
   .fix:hover .go,.prod:hover .go{background:var(--blue-d);transform:rotate(-45deg)}
   .prod:hover .ph img{transform:scale(1.05)}
 }
@@ -256,6 +262,16 @@ html[lang="kk"] .h1{letter-spacing:-.01em}
 .js .rv{opacity:0;transform:translateY(28px)}
 
 /* широкие и средние */
+.hero-in{min-height:min(calc(100svh - var(--hdr) - 120px),820px)}
+@media (min-width:1800px){
+  .wrap,.hdr-in{max-width:calc(1520px + 2*var(--pad))}
+  .h1{font-size:clamp(84px,4.6vw,118px)}
+  .h2{font-size:clamp(52px,2.8vw,64px)}
+  .arch-wrap{width:min(100%,540px)}
+  body{font-size:17px}
+  .cases .case{flex-basis:420px}
+}
+@media (min-width:1800px) and (min-width:1336px){.cases{padding-left:calc((100vw - 1520px)/2);scroll-padding-left:calc((100vw - 1520px)/2)}}
 @media (max-width:1279px){.hdr-tel{display:none}}
 @media (max-width:1139px){
   .nav{display:none}
@@ -263,13 +279,15 @@ html[lang="kk"] .h1{letter-spacing:-.01em}
   .menu-open .hdr{background:var(--bg)}
 }
 @media (max-width:1023px){
-  .fix-grid,.prod-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .prod-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
   .why{grid-template-columns:repeat(2,minmax(0,1fr))}
   .price{grid-template-columns:1fr 1fr}
   .price-btn{grid-column:1/-1;justify-self:start}
   .cta{grid-template-columns:1fr}
 }
 @media (max-width:899px){
+  .fix-wrap{grid-template-columns:1fr}
+  .fix-ph{min-height:0;aspect-ratio:16/10;order:2}
   .hero-in{grid-template-columns:1fr;min-height:0}
   .arch-wrap{width:min(100%,340px)}
   .stats-in{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -293,10 +311,9 @@ html[lang="kk"] .h1{letter-spacing:-.01em}
   .logo img{height:28px}
   .tagline{flex-direction:column;gap:4px;letter-spacing:.1em;font-size:11px}
   .hero-btns .pill{flex:1 1 100%}
-  .fix-grid,.prod-grid,.why{grid-template-columns:1fr}
-  .fix{min-height:0;padding:22px 76px 22px 22px}
-  .fix .go{top:50%;bottom:auto;margin-top:-21px}
-  .fix::before{left:22px}
+  .prod-grid,.why{grid-template-columns:1fr}
+  .fix{padding:16px 18px}
+  .fix-ph{min-height:0;aspect-ratio:4/3}
   .ph{aspect-ratio:4/3}
   .more,.biz,.head-row{flex-direction:column;align-items:flex-start}
   .head-row .arrows{align-self:flex-end;margin-top:-8px}
