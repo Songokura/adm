@@ -10,13 +10,14 @@
 <meta property="og:title" content="ADM Service - ремонт и обслуживание окон и дверей в Астане">
 <meta property="og:description" content="Бесплатный выезд инженера в день обращения. Работы - от 2 980 ₸. Для частных лиц и организаций.">
 <meta property="og:image" content="https://songokura.github.io/admservice/assets/img/og-image.jpg">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#F1F1EE">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-<link rel="preload" href="assets/fonts/Geologica-cyrillic-f28b2b.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/Unbounded-cyrillic-c86556.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/GolosText-cyrillic-f57bdd.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="styles.css?v=20261121-2">
+<link rel="preload" href="assets/photos/arch-71.webp" as="image" fetchpriority="high">
+<link rel="stylesheet" href="styles.css?v=20261123-2">
 <link rel="canonical" href="https://songokura.github.io/admservice/">
 <meta property="og:url" content="https://songokura.github.io/admservice/">
 <meta name="twitter:card" content="summary_large_image">
@@ -34,19 +35,23 @@
     <symbol id="ic-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></symbol>
     <symbol id="ic-tel" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M6.6 3.5h2.7l1.4 4-1.9 1.4a12 12 0 0 0 6.3 6.3l1.4-1.9 4 1.4v2.7a2 2 0 0 1-2.2 2A16.6 16.6 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2Z"/></symbol>
     <symbol id="ic-arr" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
-    <symbol id="ic-wind" viewBox="0 0 28 14"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M1 4c4-3 7 3 11 0s7 3 11 0M5 10c3-2 6 2 9 0s6 2 9 0"/></symbol>
+    <symbol id="ic-ok" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="ic-team" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 19.5c.6-3.4 3-5.3 6-5.3s5.4 1.9 6 5.3"/><circle cx="17" cy="9" r="2.4"/><path d="M16.5 14.3c2.4.2 4 1.8 4.5 4.6"/></g></symbol>
+    <symbol id="ic-doc" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6Z"/><path d="M14 3v4h4M9 12h6M9 16h4"/></g></symbol>
+    <symbol id="ic-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v5.5c0 4.4 3 8 7 9.5 4-1.5 7-5.1 7-9.5V6Z"/><path d="m9 12 2.2 2.2L15.5 10"/></g></symbol>
+    <symbol id="ic-clean" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3 11 11"/><path d="M7.5 11h7l1.5 9H6Z"/><path d="M9.5 15v5M12.5 15v5"/></g></symbol>
   </defs>
 </svg>
 
 <header class="hdr" id="hdr">
   <div class="hdr-in">
-    <a class="logo" href="#top" aria-label="ADM Service"><img src="assets/img/logo.svg?v=2" alt="ADM Service" width="184" height="100"></a>
+    <a class="logo" href="#top" aria-label="ADM Service"><img src="assets/img/logo-adm.svg?v=1" alt="ADM" width="136" height="40"></a>
     <nav class="nav" aria-label="Основное меню">
-      <a href="#uslugi" data-i18n="nav.uslugi">Услуги</a>
-      <a href="#stoimost" data-i18n="nav.stoimost">Стоимость</a>
-      <a href="#poryadok" data-i18n="nav.poryadok">Порядок работ</a>
+      <a href="#uslugi" data-i18n="nav.uslugi">Ремонт</a>
+      <a href="#izdeliya" data-i18n="nav.izd">Остекление</a>
+      <a href="#stoimost" data-i18n="nav.stoimost">Цены</a>
       <a href="#obekty" data-i18n="nav.obekty">Объекты</a>
-      <a href="#organizaciyam" data-i18n="nav.org">Организациям</a>
+      <a href="#organizaciyam" data-i18n="nav.org">Бизнесу</a>
       <a href="#kontakty" data-i18n="nav.kontakty">Контакты</a>
     </nav>
     <div class="hdr-right">
@@ -54,9 +59,9 @@
         <button type="button" data-lang="ru" aria-pressed="true">RU</button>
         <button type="button" data-lang="kk" aria-pressed="false">KZ</button>
       </div>
-      <a class="hdr-ig" href="https://www.instagram.com/service.adm/" target="_blank" rel="noopener" aria-label="Работы ADM Service в Instagram" data-i18n-aria="hdr.ig"><svg width="22" height="22"><use href="#ic-ig"/></svg></a>
+      <a class="hdr-ig" href="https://www.instagram.com/service.adm/" target="_blank" rel="noopener" aria-label="Работы ADM Service в Instagram" data-i18n-aria="hdr.ig"><svg width="20" height="20"><use href="#ic-ig"/></svg></a>
       <a class="hdr-tel" href="tel:+77775639425">+7 777 563 94 25</a>
-      <a class="btn btn-dark hdr-cta js-wa" data-wa="wa.hero" data-wa-text="Здравствуйте! Нужен ремонт окон. Прошу согласовать выезд инженера на осмотр и расчёт." href="https://wa.me/77775639425" target="_blank" rel="noopener"><span data-i18n="hdr.cta">Вызвать инженера</span></a>
+      <a class="pill pill-wa hdr-cta js-wa" data-wa="wa.hero" data-wa-text="Здравствуйте! Нужен ремонт окон. Прошу согласовать выезд инженера на осмотр и расчёт." href="https://wa.me/77775639425" target="_blank" rel="noopener"><svg width="16" height="16"><use href="#ic-wa"/></svg><span>WhatsApp</span></a>
       <button class="burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="mmenu"><i></i><i></i></button>
     </div>
   </div>
@@ -64,586 +69,320 @@
 
 <div class="mmenu" id="mmenu" hidden>
   <nav class="mmenu-nav">
-    <a href="#uslugi" data-i18n="nav.uslugi">Услуги</a>
-    <a href="#stoimost" data-i18n="nav.stoimost">Стоимость</a>
-    <a href="#poryadok" data-i18n="nav.poryadok">Порядок работ</a>
+    <a href="#uslugi" data-i18n="nav.uslugi">Ремонт</a>
+    <a href="#izdeliya" data-i18n="nav.izd">Остекление</a>
+    <a href="#stoimost" data-i18n="nav.stoimost">Цены</a>
     <a href="#obekty" data-i18n="nav.obekty">Объекты</a>
-    <a href="#organizaciyam" data-i18n="nav.org">Организациям</a>
+    <a href="#organizaciyam" data-i18n="nav.org">Бизнесу</a>
     <a href="#kontakty" data-i18n="nav.kontakty">Контакты</a>
   </nav>
   <div class="mmenu-btns">
-    <a class="btn btn-dark" href="tel:+77775639425"><svg width="18" height="18"><use href="#ic-tel"/></svg><span data-i18n="c.call">Позвонить</span></a>
-    <a class="btn btn-wa js-wa" data-wa="wa.hero" data-wa-text="Здравствуйте! Нужен ремонт окон. Прошу согласовать выезд инженера на осмотр и расчёт." href="https://wa.me/77775639425" target="_blank" rel="noopener"><svg width="18" height="18"><use href="#ic-wa"/></svg><span>WhatsApp</span></a>
-    <a class="btn btn-line" href="https://www.instagram.com/service.adm/" target="_blank" rel="noopener"><svg width="18" height="18"><use href="#ic-ig"/></svg><span data-i18n="c.ig">Работы в Instagram</span></a>
+    <a class="pill pill-dark" href="tel:+77775639425"><svg width="18" height="18"><use href="#ic-tel"/></svg><span data-i18n="c.call">Позвонить</span></a>
+    <a class="pill pill-wa js-wa" data-wa="wa.hero" data-wa-text="Здравствуйте! Нужен ремонт окон. Прошу согласовать выезд инженера на осмотр и расчёт." href="https://wa.me/77775639425" target="_blank" rel="noopener"><svg width="18" height="18"><use href="#ic-wa"/></svg><span>WhatsApp</span></a>
+    <a class="pill pill-line" href="https://www.instagram.com/service.adm/" target="_blank" rel="noopener"><svg width="18" height="18"><use href="#ic-ig"/></svg><span data-i18n="c.ig">Работы в Instagram</span></a>
   </div>
 </div>
 
 <main>
 
-<!-- ================= ГЕРОЙ ================= -->
-<section class="hero" id="top" data-state="before">
-  <div class="room" aria-hidden="true">
-    <div class="room-warm"></div>
-    <div class="room-floor"></div>
-  </div>
-  <canvas class="wind-room" aria-hidden="true"></canvas>
-
-  <div class="hero-in">
-    <div class="hero-copy">
-      <p class="kicker" data-i18n="hero.kicker">Астана · окна и двери ПВХ и алюминия · 6 лет работы</p>
-      <h1 class="h1" data-i18n="hero.h1" data-split>Ремонт окон в Астане: устранение продувания, регулировка, замена уплотнителя</h1>
-      <p class="lead hero-lead" data-i18n="hero.lead">Инженер приезжает на осмотр и расчёт бесплатно, в день обращения. Стоимость работ - от 2&nbsp;980&nbsp;₸.</p>
+<!-- ГЕРОЙ -->
+<section class="hero" id="top">
+  <div class="wrap hero-in">
+    <div class="hero-txt">
+      <p class="tagline"><span data-i18n="hero.kicker">Астана · окна и двери ПВХ и алюминия</span><span class="tl-r" data-i18n="hero.kicker2">6 лет работы</span></p>
+      <h1 class="h1">
+        <span class="l1" data-i18n="hero.l1">Ремонт</span>
+        <span class="l2" data-i18n="hero.l2">окон и дверей</span>
+        <span class="l3" data-i18n="hero.l3">в Астане</span>
+      </h1>
+      <p class="hero-lead" data-i18n="hero.lead">Инженер приедет в день обращения. Осмотр и расчёт - бесплатно, гарантия - до 5 лет.</p>
       <div class="hero-btns">
-        <a class="btn btn-dark btn-lg js-wa" data-wa="wa.hero" data-wa-text="Здравствуйте! Нужен ремонт окон. Прошу согласовать выезд инженера на осмотр и расчёт." href="https://wa.me/77775639425" target="_blank" rel="noopener"><svg width="20" height="20"><use href="#ic-wa"/></svg><span data-i18n="hero.btn1">Вызвать инженера</span></a>
-        <a class="btn btn-line btn-lg" href="#uslugi"><span data-i18n="hero.btn2">Услуги и стоимость</span></a>
+        <a class="pill pill-dark pill-lg js-wa" data-wa="wa.hero" data-wa-text="Здравствуйте! Нужен ремонт окон. Прошу согласовать выезд инженера на осмотр и расчёт." href="https://wa.me/77775639425" target="_blank" rel="noopener"><svg width="18" height="18"><use href="#ic-wa"/></svg><span data-i18n="hero.btn1">Вызвать инженера</span></a>
+        <a class="pill pill-line pill-lg" href="#uslugi"><span data-i18n="hero.btn2">Услуги и цены</span></a>
       </div>
-      <div class="hero-sub">
-        <button class="scene-btn" type="button" aria-pressed="false">
-          <span class="scene-sw" aria-hidden="true"><i></i></span>
-          <span data-i18n="hero.scene">Что меняется после ремонта</span>
-        </button>
-        <a class="hero-ig" href="https://www.instagram.com/service.adm/" target="_blank" rel="noopener"><svg width="18" height="18"><use href="#ic-ig"/></svg><span data-i18n="hero.ig">Работы в Instagram →</span></a>
-      </div>
+      <a class="hero-ig" href="https://www.instagram.com/service.adm/" target="_blank" rel="noopener"><svg width="18" height="18"><use href="#ic-ig"/></svg><span data-i18n="hero.ig">Работы в Instagram →</span></a>
     </div>
 
-    <div class="scene" aria-hidden="true">
-      <div class="win">
-        <div class="win-rod"></div>
-
-        <div class="win-glass">
-          <div class="sky"></div>
-          <div class="sky-glow"></div>
-          <div class="plx" data-depth="4">
-            <svg class="city city-far" viewBox="0 0 812 542" preserveAspectRatio="none">
-              <path d="M-20 542V452h34v-22h26v22h18v-46h40v46h22v-30h30v30h14v-64h12l10-14 10 14h12v64h26v-38h44v38h16v-52h34v52h20v-28h38v28h18v-70h30v70h22v-40h46v40h14v-56h36v56h22v-34h30v34h18v-48h42v48h24v-26h34v26h16v-60h28v60h40V542Z"/>
-              <!-- дальняя сфера и пирамида -->
-              <circle cx="575" cy="436" r="24"/>
-            </svg>
-          </div>
-          <div class="haze haze-1"></div>
-          <div class="plx" data-depth="8">
-            <svg class="city city-mid" viewBox="0 0 812 542" preserveAspectRatio="none">
-              <!-- шатёр -->
-              <path d="M28 542C52 470 120 380 196 322l6-52 5 52c40 60 86 150 110 220Z"/>
-              <g class="rib"><path d="M202 300C150 380 100 460 70 542M203 300c-16 80-26 170-30 242M204 300c14 80 34 170 52 242M206 302c36 70 62 150 82 240"/></g>
-              <!-- волнистые башни -->
-              <path transform="translate(96 0)" d="M352 542V330c8-14 20-14 30 0v212ZM392 542V290c9-16 22-16 32 0v252ZM434 542V352c8-12 19-12 28 0v190Z"/>
-              <!-- монумент с шаром -->
-              <path d="M604 542l10-58c2-40 2-96-2-128l-26-56c14 8 22 20 30 36l4-48 4 0 4 48c8-16 16-28 30-36l-26 56c-4 32-4 88-2 128l10 58Z"/>
-              <!-- высотка со ступенчатым верхом -->
-              <path d="M700 542V250h10v-28h10v-30h8v-34h6v34h8v30h10v28h10v292Z"/>
-              <!-- ярусное здание со шпилем -->
-              <path transform="translate(-196 0)" d="M488 542V420h14v-36h12v-30h10v-40h4v-30l3-22 3 22v30h4v40h10v30h12v36h14v122Z"/>
-            </svg>
-            <span class="orb"></span>
-            <span class="beacon b1"></span><span class="beacon b2"></span>
-          </div>
-          <div class="haze haze-2"></div>
-          <div class="plx" data-depth="14">
-            <svg class="city city-near" viewBox="0 0 812 542" preserveAspectRatio="none">
-              <path class="bld" d="M-10 542V396h78v-30h44v176ZM112 542V448h64v94ZM236 542V470h50v-26h40v98ZM520 542V462h58v80ZM650 542V430h36v-40h52v152ZM738 542V468h90v74Z"/>
-              <g class="lit">
-                <rect x="6" y="412" width="7" height="9"/><rect x="34" y="412" width="7" height="9"/><rect x="48" y="434" width="7" height="9"/><rect x="20" y="456" width="7" height="9"/><rect x="76" y="388" width="7" height="9"/><rect x="92" y="412" width="7" height="9"/><rect x="62" y="478" width="7" height="9"/><rect x="6" y="500" width="7" height="9"/><rect x="92" y="478" width="7" height="9"/>
-                <rect x="124" y="462" width="7" height="9"/><rect x="152" y="484" width="7" height="9"/><rect x="138" y="508" width="7" height="9"/>
-                <rect x="246" y="486" width="7" height="9"/><rect x="296" y="462" width="7" height="9"/><rect x="310" y="508" width="7" height="9"/><rect x="262" y="512" width="7" height="9"/>
-                <rect x="532" y="478" width="7" height="9"/><rect x="560" y="500" width="7" height="9"/>
-                <rect x="660" y="446" width="7" height="9"/><rect x="698" y="406" width="7" height="9"/><rect x="722" y="430" width="7" height="9"/><rect x="698" y="476" width="7" height="9"/><rect x="664" y="500" width="7" height="9"/><rect x="722" y="508" width="7" height="9"/>
-                <rect x="752" y="484" width="7" height="9"/><rect x="786" y="506" width="7" height="9"/>
-              </g>
-              <g class="lit tw">
-                <rect x="20" y="412" width="7" height="9"/><rect x="76" y="456" width="7" height="9"/><rect x="166" y="462" width="7" height="9"/><rect x="278" y="486" width="7" height="9"/><rect x="546" y="478" width="7" height="9"/><rect x="710" y="452" width="7" height="9"/><rect x="770" y="484" width="7" height="9"/>
-              </g>
-              <!-- сугроб на отливе -->
-              <path class="drift" d="M-10 542v-14c60-16 120-4 190-10s120-18 200-12 150 16 230 8 140-10 212 6v22Z"/>
-            </svg>
-          </div>
-          <canvas class="wind-out"></canvas>
-          <div class="glass-cold"></div>
-          <div class="glass-warm"></div>
-          <div class="glass-glare"></div>
-        </div>
-
-        <svg class="win-frame" viewBox="0 0 1000 900">
-          <defs>
-            <linearGradient id="pvc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#eef2f3"/></linearGradient>
-            <linearGradient id="sillg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e3e9eb"/></linearGradient>
-            <linearGradient id="shd" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#101314" stop-opacity=".16"/><stop offset="1" stop-color="#101314" stop-opacity="0"/></linearGradient>
-          </defs>
-          <!-- коробка -->
-          <path fill="url(#pvc)" stroke="#101314" stroke-width="3" fill-rule="evenodd" stroke-linejoin="round" d="M66 30h868a6 6 0 0 1 6 6v598a6 6 0 0 1-6 6H66a6 6 0 0 1-6-6V36a6 6 0 0 1 6-6ZM94 64v542h386V64ZM530 74v522h376V74Z"/>
-          <path fill="none" stroke="#c5d0d3" stroke-width="2" d="M76 46h848v578H76ZM520 84h396v502H520Z"/>
-          <!-- створка -->
-          <path fill="#fff" stroke="#101314" stroke-width="3" fill-rule="evenodd" stroke-linejoin="round" d="M100 68h374a2 2 0 0 1 2 2v530a2 2 0 0 1-2 2H100a2 2 0 0 1-2-2V70a2 2 0 0 1 2-2ZM126 96v478h322V96Z"/>
-          <path fill="none" stroke="#c5d0d3" stroke-width="2" d="M112 82h350v506H112Z"/>
-          <!-- петли -->
-          <rect x="86" y="118" width="12" height="34" rx="3" fill="#aeb9bc" stroke="#101314" stroke-width="2"/>
-          <rect x="86" y="518" width="12" height="34" rx="3" fill="#aeb9bc" stroke="#101314" stroke-width="2"/>
-          <!-- ручка -->
-          <rect x="454" y="304" width="16" height="42" rx="6" fill="#101314"/>
-          <rect x="458" y="322" width="8" height="74" rx="4" fill="#101314"/>
-          <!-- контур уплотнителя и прижима -->
-          <rect class="seal-old" x="96" y="66" width="382" height="538" rx="3" fill="none"/>
-          <rect class="seal-glow" x="96" y="66" width="382" height="538" rx="3" fill="none" pathLength="1"/>
-          <rect class="seal-new" x="96" y="66" width="382" height="538" rx="3" fill="none" pathLength="1"/>
-          <!-- подоконник -->
-          <rect x="60" y="668" width="880" height="34" fill="url(#shd)"/>
-          <rect x="22" y="640" width="956" height="28" rx="6" fill="url(#sillg)" stroke="#101314" stroke-width="3"/>
-          <!-- радиатор -->
-          <g class="rad" stroke="#101314" stroke-width="3" fill="#fff">
-            <rect x="356" y="724" width="470" height="12" rx="6" fill="#dfe6e8"/>
-            <rect x="356" y="852" width="470" height="12" rx="6" fill="#dfe6e8"/>
-            <g>
-              <rect x="368" y="714" width="30" height="160" rx="15"/><rect x="406" y="714" width="30" height="160" rx="15"/><rect x="444" y="714" width="30" height="160" rx="15"/><rect x="482" y="714" width="30" height="160" rx="15"/><rect x="520" y="714" width="30" height="160" rx="15"/><rect x="558" y="714" width="30" height="160" rx="15"/><rect x="596" y="714" width="30" height="160" rx="15"/><rect x="634" y="714" width="30" height="160" rx="15"/><rect x="672" y="714" width="30" height="160" rx="15"/><rect x="710" y="714" width="30" height="160" rx="15"/><rect x="748" y="714" width="30" height="160" rx="15"/><rect x="786" y="714" width="30" height="160" rx="15"/>
-            </g>
-            <path d="M826 730h22v-16" fill="none"/><circle cx="848" cy="706" r="9" fill="#101314"/>
-          </g>
-        </svg>
-
-        <div class="rad-glow"></div>
-        <svg class="heat" viewBox="0 0 1000 900"><g fill="none" stroke="#e9a856" stroke-width="4.5" stroke-linecap="round"><path d="M392 880q-16 -25 0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50"/><path d="M466 880q-16 -25 0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50"/><path d="M542 880q-16 -25 0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50"/><path d="M618 880q-16 -25 0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50"/><path d="M694 880q-16 -25 0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50"/><path d="M770 880q-16 -25 0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50"/><path d="M800 880q-16 -25 0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50t0 -50"/></g></svg>
-
-        <svg class="plant" viewBox="0 0 160 200">
-          <g class="leaves" fill="#0B8F8B" stroke="#101314" stroke-width="2.5" stroke-linejoin="round">
-            <path class="lf" style="--r:-34deg" d="M80 130C52 104 40 70 48 30c28 22 40 58 32 100Z"/>
-            <path class="lf" style="--r:26deg" d="M80 130c-10-42 4-78 34-98 6 40-6 74-34 98Z" fill="#0ABAB5"/>
-            <path class="lf" style="--r:-4deg" d="M80 132C64 94 66 50 82 8c18 42 16 86-2 124Z"/>
-            <path class="lf" style="--r:58deg" d="M82 134c0-34 20-60 54-70-2 34-22 60-54 70Z" fill="#0ABAB5"/>
-            <path class="lf" style="--r:-62deg" d="M78 134c-32-8-52-32-56-66 34 8 54 32 56 66Z"/>
-          </g>
-          <path d="M46 132h68l-8 60a6 6 0 0 1-6 5H60a6 6 0 0 1-6-5Z" fill="#fff" stroke="#101314" stroke-width="3" stroke-linejoin="round"/>
-          <path d="M42 126h76v12H42Z" fill="#fff" stroke="#101314" stroke-width="3" stroke-linejoin="round"/>
-        </svg>
-
-        <svg class="curtain" viewBox="0 0 320 860" preserveAspectRatio="none">
-          <defs>
-            <linearGradient id="tul" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".96"/><stop offset="1" stop-color="#f3f7f8" stop-opacity=".86"/></linearGradient>
-          </defs>
-          <g class="cur-bands"></g>
-          <g class="cur-folds" fill="none" stroke="#101314" stroke-opacity=".2" stroke-width="1.6"></g>
-          <path class="cur-edge" fill="none" stroke="#101314" stroke-width="2.6" stroke-linejoin="round"/>
-        </svg>
+    <figure class="arch-wrap">
+      <span class="arch-side" aria-hidden="true" data-i18n="hero.side">Работы наших мастеров</span>
+      <div class="arch">
+        <img class="on" src="assets/photos/arch-71.webp" alt="Мастер ADM Service меняет стеклопакет" width="718" height="1599" fetchpriority="high">
+        <img data-src="assets/photos/arch-62.webp" alt="Новые входные двери ресторана" width="718" height="1599">
+        <img data-src="assets/photos/arch-69.webp" alt="Витраж фасада после работ" width="718" height="1599">
+        <span class="arch-logo"><img src="assets/img/logo-adm-w.svg?v=1" alt="" width="68" height="20"></span>
       </div>
-
-      <ul class="status">
-        <li class="st"><span class="st-dot"></span><span class="st-k" data-i18n="st.1k">Продувание</span><span class="st-v"><b class="st-a" data-i18n="st.1a">есть</b><b class="st-b" data-i18n="st.1b">устранено</b></span></li>
-        <li class="st"><span class="st-dot"></span><span class="st-k" data-i18n="st.2k">Уплотнитель</span><span class="st-v"><b class="st-a" data-i18n="st.2a">изношен</b><b class="st-b" data-i18n="st.2b">заменён</b></span></li>
-        <li class="st"><span class="st-dot"></span><span class="st-k" data-i18n="st.3k">Прижим створки</span><span class="st-v"><b class="st-a" data-i18n="st.3a">слабый</b><b class="st-b" data-i18n="st.3b">отрегулирован</b></span></li>
-      </ul>
-    </div>
+      <div class="seal" aria-hidden="true">
+        <svg viewBox="0 0 120 120"><defs><path id="seal-c" d="M60 60m-44 0a44 44 0 1 1 88 0a44 44 0 1 1-88 0"/></defs><text><textPath href="#seal-c" textLength="270" lengthAdjust="spacing" data-i18n="hero.seal">ГАРАНТИЯ ДО 5 ЛЕТ · ВЫЕЗД В ДЕНЬ ЗАЯВКИ ·</textPath></text></svg>
+        <i><svg width="22" height="22"><use href="#ic-ok"/></svg></i>
+      </div>
+      <figcaption class="arch-cap"><span class="cap-t" data-i18n="hero.cap1">Замена стеклопакета</span></figcaption>
+    </figure>
   </div>
 </section>
 
-<!-- бегущая строка -->
-<div class="mq" aria-hidden="true">
-  <div class="mq-track">
-    <div class="mq-set">
-      <span data-i18n="mq.1">Замена уплотнителя</span><i><svg><use href="#ic-wind"/></svg></i>
-      <span class="o" data-i18n="mq.2">Регулировка окон</span><i><svg><use href="#ic-wind"/></svg></i>
-      <span data-i18n="mq.3">Стеклопакеты</span><i><svg><use href="#ic-wind"/></svg></i>
-      <span class="o" data-i18n="mq.4">Устранение продувания</span><i><svg><use href="#ic-wind"/></svg></i>
-      <span data-i18n="mq.5">Утепление</span><i><svg><use href="#ic-wind"/></svg></i>
-      <span class="o" data-i18n="mq.6">Подоконники</span><i><svg><use href="#ic-wind"/></svg></i>
+<!-- ЦИФРЫ -->
+<section class="stats" aria-label="ADM Service в цифрах">
+  <div class="wrap stats-in">
+    <div class="stat"><b><span class="num" data-count="6">6</span></b><span data-i18n="st.1">лет работы в Астане</span></div>
+    <div class="stat"><b><span class="num" data-count="1000">1000</span><sup>+</sup></b><span data-i18n="st.2">выполненных объектов</span></div>
+    <div class="stat"><b><span class="num" data-count="5000">5 000</span><small>м²</small></b><span data-i18n="st.3">остекления</span></div>
+    <div class="stat"><b><span class="num" data-count="3">3</span></b><span data-i18n="st.4">бригады и альпинисты</span></div>
+  </div>
+</section>
+
+<!-- ЛЕНТА ФОТО -->
+<section class="look" aria-label="Фото работ">
+  <div class="look-track">
+    <div class="look-set">
+      <img src="assets/photos/m-card-44.webp" alt="Тамбур супермаркета SMALL" width="640" height="460" loading="lazy">
+      <img src="assets/photos/m-foto-72.webp" alt="Монтаж штапика" width="640" height="460" loading="lazy">
+      <img src="assets/photos/m-card-3.webp" alt="Остекление веранды частного дома" width="640" height="460" loading="lazy">
+      <img src="assets/photos/m-hero-62.webp" alt="Входные двери ресторана" width="640" height="460" loading="lazy">
+      <img src="assets/photos/m-plate-22.webp" alt="Перегородка в зале" width="640" height="460" loading="lazy">
+      <img src="assets/photos/m-foto-75.webp" alt="Бригада со стеклопакетами на объекте" width="640" height="460" loading="lazy">
+      <img src="assets/photos/m-card-11.webp" alt="ЖД вокзал: новые окна" width="640" height="460" loading="lazy">
+      <img src="assets/photos/m-card-69.webp" alt="Витраж фасада" width="640" height="460" loading="lazy">
+      <img src="assets/photos/m-plate-70.webp" alt="Алюминиевые перегородки" width="640" height="460" loading="lazy">
+      <img src="assets/photos/m-foto-30.webp" alt="Мастер на монтаже перегородки" width="640" height="460" loading="lazy">
     </div>
   </div>
-</div>
+  <p class="look-cap" data-i18n="look.cap">Объекты ADM · тамбуры · двери · перегородки · витражи · веранды</p>
+</section>
 
-<!-- ================= УСЛУГИ ================= -->
-<section class="sec sec-serv" id="uslugi">
+<!-- РЕМОНТ -->
+<section class="sec" id="uslugi">
   <div class="wrap">
     <header class="head">
-      <p class="kicker" data-i18n="s.kicker">Услуги</p>
-      <h2 class="h2" data-i18n="s.h2" data-split>Ремонт и обслуживание окон и дверей</h2>
-      <p class="lead" data-i18n="s.lead">Работаем с изделиями из ПВХ и алюминия. Более 100 услуг и изделий - ниже основные.</p>
+      <p class="kicker" data-i18n="s.kicker">Ремонт</p>
+      <h2 class="h2" data-i18n="s.h2">Ремонт окон и дверей</h2>
+      <p class="lead" data-i18n="s.lead">Выберите, что беспокоит, - инженер приедет и назовёт точную цену.</p>
     </header>
-
-    <div class="cards">
-      <!-- 1 уплотнитель -->
-      <article class="card c-a" id="uplotnitel">
-        <div class="ill">
-          <svg viewBox="0 0 320 200">
-            <rect class="ln fl" x="34" y="44" width="112" height="112" rx="8"/>
-            <rect class="ln fl" x="174" y="44" width="112" height="112" rx="8"/>
-            <path class="ln thin" d="M50 60h80v80H50ZM190 60h80v80h-80Z"/>
-            <path class="wnd w1" d="M160 6c-10 14 10 24 0 38s8 22 0 34"/>
-            <path class="wnd w2 off" d="M160 96c-8 12 8 22 0 34s10 22 0 36-6 18 0 28"/>
-            <ellipse class="seal-bad" cx="160" cy="88" rx="4" ry="9"/>
-            <ellipse class="seal-ok" cx="160" cy="88" rx="13" ry="12"/>
-          </svg>
-        </div>
-        <div class="card-b">
-          <h3 class="h3" data-i18n="s1.t">Замена уплотнительной резины</h3>
-          <p class="when" data-i18n="s1.w">Из закрытого окна дует, слышен шум ветра.</p>
-          <p class="desc" data-i18n="s1.d">Меняем изношенный уплотнитель на створках и рамах окон и дверей.</p>
-          <a class="lnk js-wa" data-wa="wa.s1" data-wa-text="Здравствуйте! Нужна замена уплотнительной резины. Прошу согласовать выезд инженера на осмотр и расчёт." href="https://wa.me/77775639425" target="_blank" rel="noopener"><span data-i18n="s.btn">Узнать стоимость</span><svg width="18" height="18"><use href="#ic-arr"/></svg></a>
-        </div>
-      </article>
-
-      <!-- 2 стеклопакеты -->
-      <article class="card c-b" id="steklopakety">
-        <div class="ill">
-          <svg viewBox="0 0 320 200">
-            <rect class="ln fl" x="70" y="22" width="180" height="156" rx="8"/>
-            <rect class="gl" x="88" y="40" width="144" height="120" rx="3"/>
-            <rect class="ln thin" x="88" y="40" width="144" height="120" rx="3"/>
-            <path class="crack" d="M150 40l14 34-22 20 30 26-12 40M164 74l34-14M142 94l-30 14M172 120l40 12"/>
-            <g class="glare"><path d="M96 150l60-104h22l-60 104ZM170 150l40-70h10l-40 70Z"/></g>
-          </svg>
-        </div>
-        <div class="card-b">
-          <h3 class="h3" data-i18n="s2.t">Изготовление и установка стеклопакетов</h3>
-          <p class="when" data-i18n="s2.w">Стекло разбито, стеклопакет запотевает изнутри.</p>
-          <p class="desc" data-i18n="s2.d">Изготавливаем стеклопакеты по размерам проёма и устанавливаем их в существующие окна, двери и витражи.</p>
-          <a class="lnk js-wa" data-wa="wa.s2" data-wa-text="Здравствуйте! Нужны изготовление и установка стеклопакета. Прошу согласовать выезд инженера на замер и расчёт." href="https://wa.me/77775639425" target="_blank" rel="noopener"><span data-i18n="s.btn">Узнать стоимость</span><svg width="18" height="18"><use href="#ic-arr"/></svg></a>
-        </div>
-      </article>
-
-      <!-- 3 регулировка -->
-      <article class="card c-c" id="regulirovka">
-        <div class="ill">
-          <svg viewBox="0 0 320 200">
-            <rect class="ln fl" x="86" y="16" width="148" height="168" rx="8"/>
-            <g class="sag">
-              <rect class="ln fl2" x="100" y="30" width="120" height="140" rx="4"/>
-              <rect class="gl" x="114" y="44" width="92" height="112" rx="2"/>
-              <rect class="dk" x="207" y="88" width="7" height="26" rx="3"/>
-            </g>
-            <path class="rub" d="M222 172l10 6"/>
-            <g class="key"><circle class="ln" cx="86" cy="40" r="9"/><path class="ln" d="M86 31v-8M86 49v8M77 40h-8M95 40h8"/></g>
-          </svg>
-        </div>
-        <div class="card-b">
-          <h3 class="h3" data-i18n="s3.t">Регулировка окон</h3>
-          <p class="when" data-i18n="s3.w">Створка провисла, задевает раму, плохо закрывается, заедает фурнитура.</p>
-          <p class="desc" data-i18n="s3.d">Регулируем створки и фурнитуру окон и дверей из ПВХ и алюминия.</p>
-          <a class="lnk js-wa" data-wa="wa.s3" data-wa-text="Здравствуйте! Нужна регулировка окон. Прошу согласовать выезд инженера на осмотр и расчёт." href="https://wa.me/77775639425" target="_blank" rel="noopener"><span data-i18n="s.btn">Узнать стоимость</span><svg width="18" height="18"><use href="#ic-arr"/></svg></a>
-        </div>
-      </article>
-
-      <!-- 4 подоконники -->
-      <article class="card c-d" id="podokonniki">
-        <div class="ill">
-          <svg viewBox="0 0 320 200">
-            <path class="ln fl" d="M70 -10h180v120H70Z"/>
-            <rect class="gl" x="88" y="-10" width="144" height="102"/>
-            <path class="ln thin" d="M88 -10v102h144V-10"/>
-            <path class="hatch" d="M40 132h240v70H40Z"/>
-            <path class="ln" d="M40 132h240"/>
-            <rect class="ghost" x="52" y="112" width="216" height="18" rx="5"/>
-            <rect class="sillp" x="52" y="112" width="216" height="18" rx="5"/>
-          </svg>
-        </div>
-        <div class="card-b">
-          <h3 class="h3" data-i18n="s4.t">Установка подоконников</h3>
-          <p class="when" data-i18n="s4.w">Подоконник повреждён или не установлен.</p>
-          <p class="desc" data-i18n="s4.d">Устанавливаем и заменяем подоконники.</p>
-          <a class="lnk js-wa" data-wa="wa.s4" data-wa-text="Здравствуйте! Нужна установка подоконников. Прошу согласовать выезд инженера на замер и расчёт." href="https://wa.me/77775639425" target="_blank" rel="noopener"><span data-i18n="s.btn">Узнать стоимость</span><svg width="18" height="18"><use href="#ic-arr"/></svg></a>
-        </div>
-      </article>
-
-      <!-- 5 продувание -->
-      <article class="card c-e" id="produvanie">
-        <div class="ill">
-          <svg viewBox="0 0 320 200">
-            <rect class="ln fl" x="120" y="20" width="150" height="160" rx="8"/>
-            <rect class="gl" x="136" y="36" width="118" height="128" rx="3"/>
-            <path class="ln thin" d="M195 36v128"/>
-            <path class="wnd w1 thru" d="M128 66C96 60 84 78 56 70S24 76 6 68"/>
-            <path class="wnd w1 thru" d="M128 104C100 98 82 116 52 106S22 114 4 104"/>
-            <path class="wnd w1 thru" d="M128 142C98 138 86 154 58 146S26 152 8 144"/>
-            <circle class="ping" cx="128" cy="104" r="10"/>
-            <circle class="ping p2" cx="128" cy="104" r="10"/>
-            <circle class="found" cx="128" cy="104" r="6"/>
-          </svg>
-        </div>
-        <div class="card-b">
-          <h3 class="h3" data-i18n="s5.t">Устранение продувания</h3>
-          <p class="when" data-i18n="s5.w">Сквозняк от окна или балконной двери, холод у подоконника.</p>
-          <p class="desc" data-i18n="s5.d">Инженер находит место продувания на осмотре и определяет перечень работ.</p>
-          <a class="lnk js-wa" data-wa="wa.s5" data-wa-text="Здравствуйте! Нужно устранить продувание окна. Прошу согласовать выезд инженера на осмотр и расчёт." href="https://wa.me/77775639425" target="_blank" rel="noopener"><span data-i18n="s.btn">Узнать стоимость</span><svg width="18" height="18"><use href="#ic-arr"/></svg></a>
-        </div>
-      </article>
-
-      <!-- 6 утепление -->
-      <article class="card c-f" id="uteplenie">
-        <div class="ill">
-          <svg viewBox="0 0 320 200">
-            <path class="hatch" d="M20 10h70v180H20ZM230 10h70v180h-70Z"/>
-            <path class="ln" d="M90 10v180M230 10v180"/>
-            <rect class="ln fl" x="112" y="26" width="96" height="148" rx="6"/>
-            <rect class="gl" x="124" y="38" width="72" height="124" rx="2"/>
-            <rect class="ins" x="92" y="12" width="18" height="176" rx="3"/>
-            <rect class="ins" x="210" y="12" width="18" height="176" rx="3"/>
-            <path class="warm h1" d="M160 120c-20-6-36 6-60-4"/>
-            <path class="warm h2" d="M160 82c22-6 38 6 62-4"/>
-            <path class="warm h3" d="M160 150c22-6 38 6 62-4"/>
-          </svg>
-        </div>
-        <div class="card-b">
-          <h3 class="h3" data-i18n="s6.t">Утепление</h3>
-          <p class="when" data-i18n="s6.w">Помещение теряет тепло через оконные проёмы.</p>
-          <p class="desc" data-i18n="s6.d">Утепляем откосы и подоконники.</p>
-          <a class="lnk js-wa" data-wa="wa.s6" data-wa-text="Здравствуйте! Нужно утепление окон. Прошу согласовать выезд инженера на осмотр и расчёт." href="https://wa.me/77775639425" target="_blank" rel="noopener"><span data-i18n="s.btn">Узнать стоимость</span><svg width="18" height="18"><use href="#ic-arr"/></svg></a>
-        </div>
-      </article>
-
-      <!-- все виды работ -->
-      <aside class="all">
-        <div class="all-ph"><img src="assets/photos/plate-1.webp" alt="" loading="lazy" width="1600" height="1200"></div>
-        <svg class="all-wind" viewBox="0 0 800 400" preserveAspectRatio="none" aria-hidden="true"><path d="M-20 80c120-50 200 40 330 0s210 40 330 0 150 20 200 0M-20 200c120-50 200 40 330 0s210 40 330 0 150 20 200 0M-20 320c120-50 200 40 330 0s210 40 330 0 150 20 200 0"/></svg>
-        <div class="all-in">
-          <h3 class="h3 all-t" data-i18n="all.t">Все виды работ</h3>
-          <ul class="all-list">
-            <li data-i18n="all.1">Ремонт и обслуживание изделий из ПВХ и алюминия: окна, двери</li>
-            <li data-i18n="all.2">Регулировка алюминиевых окон и дверей</li>
-            <li data-i18n="all.3">Замена фурнитуры и уплотнителей</li>
-            <li data-i18n="all.4">Ремонт и замена стеклопакетов</li>
-            <li data-i18n="all.5">Обслуживание балконных систем</li>
-            <li data-i18n="all.6">Утепление откосов и подоконников</li>
-            <li data-i18n="all.7">Установка подоконников</li>
-            <li data-i18n="all.8">Витражи, перегородки, входные группы</li>
-          </ul>
-          <p class="all-note" data-i18n="all.note">Нужной работы нет в списке - напишите, что требуется: в перечне компании более 100 услуг и изделий.</p>
-          <a class="btn btn-tif js-wa" data-wa="wa.all" data-wa-text="Здравствуйте! Интересует работа, которой нет в списке на сайте:" href="https://wa.me/77775639425" target="_blank" rel="noopener"><svg width="18" height="18"><use href="#ic-wa"/></svg><span data-i18n="c.wa">Написать в WhatsApp</span></a>
-        </div>
-      </aside>
+    <div class="fix-grid">
+      <a class="fix js-wa" id="produvanie" data-wa="wa.s5" data-wa-text="Здравствуйте! Нужно устранить продувание окна. Прошу согласовать выезд инженера на осмотр и расчёт." href="https://wa.me/77775639425" target="_blank" rel="noopener">
+        <h3 class="h3" data-i18n="s5.t">Устранение продувания</h3><p data-i18n="s5.w">Дует от окна или балконной двери</p><span class="go"><svg width="18" height="18"><use href="#ic-arr"/></svg></span>
+      </a>
+      <a class="fix js-wa" id="uplotnitel" data-wa="wa.s1" data-wa-text="Здравствуйте! Нужна замена уплотнительной резины. Прошу согласовать выезд инженера на осмотр и расчёт." href="https://wa.me/77775639425" target="_blank" rel="noopener">
+        <h3 class="h3" data-i18n="s1.t">Замена уплотнителя</h3><p data-i18n="s1.w">Резина износилась, слышен ветер</p><span class="go"><svg width="18" height="18"><use href="#ic-arr"/></svg></span>
+      </a>
+      <a class="fix js-wa" id="regulirovka" data-wa="wa.s3" data-wa-text="Здравствуйте! Нужна регулировка окон. Прошу согласовать выезд инженера на осмотр и расчёт." href="https://wa.me/77775639425" target="_blank" rel="noopener">
+        <h3 class="h3" data-i18n="s3.t">Регулировка окон и дверей</h3><p data-i18n="s3.w">Створка провисла, плохо закрывается</p><span class="go"><svg width="18" height="18"><use href="#ic-arr"/></svg></span>
+      </a>
+      <a class="fix js-wa" id="furnitura" data-wa="wa.s7" data-wa-text="Здравствуйте! Нужна замена фурнитуры. Прошу согласовать выезд инженера на осмотр и расчёт." href="https://wa.me/77775639425" target="_blank" rel="noopener">
+        <h3 class="h3" data-i18n="s7.t">Замена фурнитуры</h3><p data-i18n="s7.w">Ручка болтается, механизм заедает</p><span class="go"><svg width="18" height="18"><use href="#ic-arr"/></svg></span>
+      </a>
+      <a class="fix js-wa" id="uteplenie" data-wa="wa.s6" data-wa-text="Здравствуйте! Нужно утепление окон. Прошу согласовать выезд инженера на осмотр и расчёт." href="https://wa.me/77775639425" target="_blank" rel="noopener">
+        <h3 class="h3" data-i18n="s6.t">Утепление откосов</h3><p data-i18n="s6.w">Холодно у окна и подоконника</p><span class="go"><svg width="18" height="18"><use href="#ic-arr"/></svg></span>
+      </a>
+      <a class="fix js-wa" id="podokonniki" data-wa="wa.s4" data-wa-text="Здравствуйте! Нужна установка подоконников. Прошу согласовать выезд инженера на замер и расчёт." href="https://wa.me/77775639425" target="_blank" rel="noopener">
+        <h3 class="h3" data-i18n="s4.t">Подоконники</h3><p data-i18n="s4.w">Установка и замена</p><span class="go"><svg width="18" height="18"><use href="#ic-arr"/></svg></span>
+      </a>
+    </div>
+    <div class="more">
+      <p><b data-i18n="all.t">Нет в списке?</b> <span data-i18n="all.note">В работе более 100 услуг и изделий - напишите, что нужно.</span></p>
+      <a class="pill pill-dark js-wa" data-wa="wa.all" data-wa-text="Здравствуйте! Интересует работа, которой нет в списке на сайте:" href="https://wa.me/77775639425" target="_blank" rel="noopener"><svg width="18" height="18"><use href="#ic-wa"/></svg><span data-i18n="c.wa">Написать в WhatsApp</span></a>
     </div>
   </div>
 </section>
 
-<!-- ================= СТОИМОСТЬ ================= -->
-<section class="sec sec-price" id="stoimost">
-  <svg class="price-wind" viewBox="0 0 1600 700" preserveAspectRatio="none" aria-hidden="true">
-    <g fill="none" stroke-linecap="round">
-      <path d="M-40 120c200-80 320 70 540 0s340 70 560 0 340 60 600-10"/>
-      <path d="M-40 250c220-70 300 60 520 0s360 70 580 0 320 50 600 0"/>
-      <path d="M-40 390c200-80 320 70 540 0s340 70 560 0 340 60 600-10"/>
-      <path d="M-40 520c220-70 300 60 520 0s360 70 580 0 320 50 600 0"/>
-      <path d="M-40 640c200-60 320 50 540 0s340 50 560 0 340 40 600-10"/>
-    </g>
-  </svg>
+<!-- ЦЕНЫ -->
+<section class="sec sec-dark" id="stoimost">
   <div class="wrap">
     <header class="head">
-      <p class="kicker" data-i18n="p.kicker">Стоимость</p>
-      <h2 class="h2" data-i18n="p.h2" data-split>Стоимость работ и условия оплаты</h2>
-      <p class="lead" data-i18n="p.lead">Стоимость рассчитывает инженер после осмотра. Выезд на осмотр и расчёт оплачивать не нужно.</p>
+      <p class="kicker" data-i18n="p.kicker">Цены</p>
+      <h2 class="h2" data-i18n="p.h2">Цена - до начала работ</h2>
+      <p class="lead" data-i18n="p.lead">Инженер осматривает и считает бесплатно. Работы начинаем после согласования цены.</p>
     </header>
     <div class="price">
-      <div class="price-big">
-        <p class="price-cap" data-i18n="p.1k">Работы</p>
-        <p class="price-num"><span class="from" data-i18n="p.from">от</span> <span class="num" data-count="2980">2&nbsp;980</span><span class="cur">&nbsp;₸</span></p>
+      <div class="price-card">
+        <span class="price-k" data-i18n="p.1k">Работы</span>
+        <p class="price-num"><span data-i18n="p.from">от</span> <span class="num" data-count="2980">2&nbsp;980</span>&nbsp;₸</p>
+        <span class="price-k" data-i18n="p.2k">средний заказ - 30&nbsp;000&nbsp;₸</span>
       </div>
-      <div class="price-mid">
-        <p class="price-cap" data-i18n="p.2k">Средняя стоимость заказа</p>
-        <p class="price-num sm"><span class="num" data-count="30000">30&nbsp;000</span><span class="cur">&nbsp;₸</span></p>
-      </div>
-      <ul class="pay">
-        <li><svg width="28" height="14"><use href="#ic-wind"/></svg><span data-i18n="p.3">Принимаем любой вид оплаты</span></li>
-        <li><svg width="28" height="14"><use href="#ic-wind"/></svg><span data-i18n="p.4">Рассрочка</span></li>
-        <li><svg width="28" height="14"><use href="#ic-wind"/></svg><span data-i18n="p.5">Действуют скидки - размер уточняйте у оператора</span></li>
+      <ul class="ticks">
+        <li><svg width="20" height="20"><use href="#ic-ok"/></svg><span data-i18n="p.6">Выезд инженера и расчёт - бесплатно</span></li>
+        <li><svg width="20" height="20"><use href="#ic-ok"/></svg><span data-i18n="p.4">Рассрочка</span></li>
+        <li><svg width="20" height="20"><use href="#ic-ok"/></svg><span data-i18n="p.3">Любой вид оплаты</span></li>
+        <li><svg width="20" height="20"><use href="#ic-ok"/></svg><span data-i18n="p.5">Скидки - уточняйте у оператора</span></li>
       </ul>
-      <a class="btn btn-dark btn-lg price-btn js-wa" data-wa="wa.price" data-wa-text="Здравствуйте! Прошу рассчитать стоимость работ. Что требуется:" href="https://wa.me/77775639425" target="_blank" rel="noopener"><svg width="20" height="20"><use href="#ic-wa"/></svg><span data-i18n="p.btn">Получить расчёт</span></a>
+      <a class="pill pill-blue pill-lg js-wa price-btn" data-wa="wa.price" data-wa-text="Здравствуйте! Прошу рассчитать стоимость работ. Что требуется:" href="https://wa.me/77775639425" target="_blank" rel="noopener"><svg width="18" height="18"><use href="#ic-wa"/></svg><span data-i18n="p.btn">Получить расчёт</span></a>
     </div>
   </div>
 </section>
 
-<!-- ================= ПОРЯДОК РАБОТ ================= -->
-<section class="sec sec-steps" id="poryadok">
+<!-- ИЗДЕЛИЯ И ОСТЕКЛЕНИЕ -->
+<section class="sec" id="izdeliya">
+  <div class="wrap">
+    <header class="head">
+      <p class="kicker" data-i18n="i.kicker">Остекление и монтаж</p>
+      <h2 class="h2" data-i18n="i.h2">Изготовим и установим</h2>
+    </header>
+    <div class="prod-grid">
+      <a class="prod js-wa" id="steklopakety" data-wa="wa.s2" data-wa-text="Здравствуйте! Нужны изготовление и установка стеклопакета. Прошу согласовать выезд инженера на замер и расчёт." href="https://wa.me/77775639425" target="_blank" rel="noopener">
+        <span class="ph"><img src="assets/photos/c-foto-71.webp" alt="Замена стеклопакета" width="640" height="800" loading="lazy"></span>
+        <span class="prod-b"><span><b class="h3" data-i18n="s2.t">Стеклопакеты</b><small data-i18n="s2.w">Изготовление по размеру и установка</small></span><span class="go"><svg width="18" height="18"><use href="#ic-arr"/></svg></span></span>
+      </a>
+      <a class="prod js-wa" id="dveri" data-wa="wa.i2" data-wa-text="Здравствуйте! Интересуют входные двери. Прошу согласовать выезд инженера на замер и расчёт." href="https://wa.me/77775639425" target="_blank" rel="noopener">
+        <span class="ph"><img src="assets/photos/c-foto-63.webp" alt="Входные двери ресторана" width="640" height="800" loading="lazy"></span>
+        <span class="prod-b"><span><b class="h3" data-i18n="i2.t">Входные двери</b><small data-i18n="i2.w">Алюминий и ПВХ, замена и ремонт</small></span><span class="go"><svg width="18" height="18"><use href="#ic-arr"/></svg></span></span>
+      </a>
+      <a class="prod js-wa" id="tambury" data-wa="wa.i3" data-wa-text="Здравствуйте! Интересует входной тамбур. Прошу согласовать выезд инженера на замер и расчёт." href="https://wa.me/77775639425" target="_blank" rel="noopener">
+        <span class="ph"><img src="assets/photos/c-plate-48.webp" alt="Входной тамбур супермаркета" width="640" height="800" loading="lazy"></span>
+        <span class="prod-b"><span><b class="h3" data-i18n="i3.t">Тамбуры и входные группы</b><small data-i18n="i3.w">Алюминиевый профиль и стекло</small></span><span class="go"><svg width="18" height="18"><use href="#ic-arr"/></svg></span></span>
+      </a>
+      <a class="prod js-wa" id="peregorodki" data-wa="wa.i4" data-wa-text="Здравствуйте! Интересуют перегородки. Прошу согласовать выезд инженера на замер и расчёт." href="https://wa.me/77775639425" target="_blank" rel="noopener">
+        <span class="ph"><img src="assets/photos/c-plate-26.webp" alt="Офисные перегородки из алюминия и стекла" width="574" height="718" loading="lazy"></span>
+        <span class="prod-b"><span><b class="h3" data-i18n="i4.t">Перегородки</b><small data-i18n="i4.w">Офисные, из алюминия и стекла</small></span><span class="go"><svg width="18" height="18"><use href="#ic-arr"/></svg></span></span>
+      </a>
+      <a class="prod js-wa" id="vitrazhi" data-wa="wa.i5" data-wa-text="Здравствуйте! Интересуют витражи. Прошу согласовать выезд инженера на замер и расчёт." href="https://wa.me/77775639425" target="_blank" rel="noopener">
+        <span class="ph"><img src="assets/photos/c-foto-67.webp" alt="Монтаж витража фасада с лесов" width="640" height="800" loading="lazy"></span>
+        <span class="prod-b"><span><b class="h3" data-i18n="i5.t">Витражи</b><small data-i18n="i5.w">Работы на высоте - бригада альпинистов</small></span><span class="go"><svg width="18" height="18"><use href="#ic-arr"/></svg></span></span>
+      </a>
+      <a class="prod js-wa" id="verandy" data-wa="wa.i6" data-wa-text="Здравствуйте! Интересует остекление веранды. Прошу согласовать выезд инженера на замер и расчёт." href="https://wa.me/77775639425" target="_blank" rel="noopener">
+        <span class="ph"><img src="assets/photos/c-plate-1.webp" alt="Остекление веранды частного дома" width="640" height="800" loading="lazy"></span>
+        <span class="prod-b"><span><b class="h3" data-i18n="i6.t">Остекление веранд</b><small data-i18n="i6.w">Для частных домов</small></span><span class="go"><svg width="18" height="18"><use href="#ic-arr"/></svg></span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ОБЪЕКТЫ -->
+<section class="sec sec-dark" id="obekty">
+  <div class="wrap">
+    <header class="head head-row">
+      <div>
+        <p class="kicker" data-i18n="ob.kicker">Объекты</p>
+        <h2 class="h2" data-i18n="ob.h2">Было и стало</h2>
+        <p class="lead" data-i18n="ob.lead">Более 1000 объектов. Среди заказчиков - супермаркет SMALL, ЖД вокзал, посёлок Родина.</p>
+      </div>
+      <div class="arrows">
+        <button class="arr prev" type="button" aria-label="Предыдущий объект" data-i18n-aria="ob.prev" disabled><svg width="20" height="20"><use href="#ic-arr"/></svg></button>
+        <button class="arr next" type="button" aria-label="Следующий объект" data-i18n-aria="ob.next"><svg width="20" height="20"><use href="#ic-arr"/></svg></button>
+      </div>
+    </header>
+  </div>
+  <div class="cases" tabindex="0">
+    <article class="case">
+      <div class="cmp" style="--p:50%">
+        <img class="cmp-b" src="assets/photos/plate-48.webp" alt="Готовый тамбур супермаркета SMALL" loading="lazy" width="718" height="1599">
+        <img class="cmp-a" src="assets/photos/foto-51.webp" alt="Каркас тамбура супермаркета SMALL" loading="lazy" width="718" height="1599">
+        <span class="tag tag-a" data-i18n="ob.1a">Каркас</span><span class="tag tag-b" data-i18n="ob.1b">Готово</span>
+        <span class="cmp-h"><i></i></span>
+        <input class="cmp-r" type="range" min="0" max="100" value="50" aria-label="Каркас / Готово">
+      </div>
+      <h3 class="case-t" data-i18n="ob.1t">Супермаркет SMALL</h3>
+      <p class="case-d" data-i18n="ob.1d">Входной тамбур из алюминиевого профиля</p>
+    </article>
+    <article class="case">
+      <div class="cmp" style="--p:50%">
+        <img class="cmp-b" src="assets/photos/foto-63.webp" alt="Новые входные двери ресторана" loading="lazy" width="718" height="1599">
+        <img class="cmp-a" src="assets/photos/foto-64.webp" alt="Вход ресторана до замены дверей" loading="lazy" width="718" height="1599">
+        <span class="tag tag-a" data-i18n="ob.2a">Было</span><span class="tag tag-b" data-i18n="ob.2b">Стало</span>
+        <span class="cmp-h"><i></i></span>
+        <input class="cmp-r" type="range" min="0" max="100" value="50" aria-label="Было / Стало">
+      </div>
+      <h3 class="case-t" data-i18n="ob.2t">Вход ресторана</h3>
+      <p class="case-d" data-i18n="ob.2d">Замена входных дверей</p>
+    </article>
+    <article class="case">
+      <div class="cmp" style="--p:50%">
+        <img class="cmp-b" src="assets/photos/foto-14.webp" alt="Новые окна в проёмах вокзала" loading="lazy" width="1600" height="718">
+        <img class="cmp-a" src="assets/photos/foto-13.webp" alt="Оконные проёмы вокзала до установки окон" loading="lazy" width="1600" height="718">
+        <span class="tag tag-a" data-i18n="ob.2a">Было</span><span class="tag tag-b" data-i18n="ob.2b">Стало</span>
+        <span class="cmp-h"><i></i></span>
+        <input class="cmp-r" type="range" min="0" max="100" value="50" aria-label="Было / Стало">
+      </div>
+      <h3 class="case-t" data-i18n="ob.3t">ЖД вокзал</h3>
+      <p class="case-d" data-i18n="ob.3d">Замена окон и утепление фасада</p>
+    </article>
+    <article class="case">
+      <div class="cmp" style="--p:50%">
+        <img class="cmp-b" src="assets/photos/plate-26.webp" alt="Готовые офисные перегородки" loading="lazy" width="1600" height="718">
+        <img class="cmp-a" src="assets/photos/foto-32.webp" alt="Каркас офисной перегородки" loading="lazy" width="1600" height="718">
+        <span class="tag tag-a" data-i18n="ob.1a">Каркас</span><span class="tag tag-b" data-i18n="ob.1b">Готово</span>
+        <span class="cmp-h"><i></i></span>
+        <input class="cmp-r" type="range" min="0" max="100" value="50" aria-label="Каркас / Готово">
+      </div>
+      <h3 class="case-t" data-i18n="ob.4t">Офисные перегородки</h3>
+      <p class="case-d" data-i18n="ob.4d">Алюминиевый профиль и стекло</p>
+    </article>
+  </div>
+  <div class="wrap obj-foot">
+    <a class="pill pill-ghost" href="https://www.instagram.com/service.adm/" target="_blank" rel="noopener"><svg width="18" height="18"><use href="#ic-ig"/></svg><span data-i18n="ob.ig">Больше объектов в Instagram</span></a>
+  </div>
+</section>
+
+<!-- КТО ПРИЕДЕТ -->
+<section class="sec" id="kompaniya">
+  <div class="wrap">
+    <header class="head">
+      <p class="kicker" data-i18n="k.kicker">Компания</p>
+      <h2 class="h2" data-i18n="k.h2">Кто приедет</h2>
+    </header>
+    <div class="why">
+      <div class="why-c"><i><svg width="24" height="24"><use href="#ic-team"/></svg></i><h3 class="h3" data-i18n="k.1t">Свои мастера</h3><p data-i18n="k.1">Инженеры и три бригады в штате</p></div>
+      <div class="why-c"><i><svg width="24" height="24"><use href="#ic-doc"/></svg></i><h3 class="h3" data-i18n="k.2t">Форма и документы</h3><p data-i18n="k.2">Мастер в фирменной одежде, документы компании - при себе</p></div>
+      <div class="why-c"><i><svg width="24" height="24"><use href="#ic-shield"/></svg></i><h3 class="h3" data-i18n="k.3t">Гарантия до 5 лет</h3><p data-i18n="k.3">От 6 месяцев до 5 лет, сроки - 2-7 рабочих дней</p></div>
+      <div class="why-c"><i><svg width="24" height="24"><use href="#ic-clean"/></svg></i><h3 class="h3" data-i18n="k.4t">Чисто после работ</h3><p data-i18n="k.4">Убираем рабочее место и вывозим мусор</p></div>
+    </div>
+    <div class="biz" id="organizaciyam">
+      <div>
+        <h3 class="h3" data-i18n="g.h2">Бизнесу и организациям</h3>
+        <p data-i18n="g.lead">Годовое обслуживание окон, дверей и витражей. Работы на высоте - своя бригада альпинистов.</p>
+      </div>
+      <a class="pill pill-dark js-wa" data-wa="wa.org" data-wa-text="Здравствуйте! Интересует обслуживание окон и дверей для организации. Объект:" href="https://wa.me/77775639425" target="_blank" rel="noopener"><svg width="18" height="18"><use href="#ic-wa"/></svg><span data-i18n="g.btn">Обсудить объект</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- КАК РАБОТАЕМ + ЗАЯВКА -->
+<section class="sec sec-soft" id="poryadok">
   <div class="wrap">
     <header class="head">
       <p class="kicker" data-i18n="o.kicker">Порядок работ</p>
-      <h2 class="h2" data-i18n="o.h2" data-split>Как оформить заказ</h2>
+      <h2 class="h2" data-i18n="o.h2">Как работаем</h2>
     </header>
-    <div class="steps">
-      <svg class="steps-line" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
-        <path class="sl-bg"/><path class="sl-fg"/>
-      </svg>
-      <ol class="steps-list">
-        <li class="step"><span class="node"></span><span class="n">01</span><h3 class="h3" data-i18n="o.1t">Заявка</h3><p data-i18n="o.1d">Позвоните, напишите в WhatsApp или оставьте заявку на сайте. Оператор отвечает в течение 10-15 минут.</p></li>
-        <li class="step"><span class="node"></span><span class="n">02</span><h3 class="h3" data-i18n="o.2t">Осмотр и расчёт</h3><p data-i18n="o.2d">Инженер приезжает на объект, осматривает окна и двери и рассчитывает стоимость.</p></li>
-        <li class="step"><span class="node"></span><span class="n">03</span><h3 class="h3" data-i18n="o.3t">Выполнение работ</h3><p data-i18n="o.3d">Срок - от 2 до 7 рабочих дней.</p></li>
-        <li class="step"><span class="node"></span><span class="n">04</span><h3 class="h3" data-i18n="o.4t">Сдача работ</h3><p data-i18n="o.4d">Мастера убирают рабочее место и вывозят мусор.</p></li>
-        <li class="step"><span class="node"></span><span class="n">05</span><h3 class="h3" data-i18n="o.5t">Гарантия</h3><p data-i18n="o.5d">На работы действует гарантия от 6 месяцев до 5 лет.</p></li>
-      </ol>
+    <ol class="steps">
+      <li><span class="n">01</span><h3 class="h3" data-i18n="o.1t">Заявка</h3><p data-i18n="o.1d">Оператор ответит за 10-15 минут</p></li>
+      <li><span class="n">02</span><h3 class="h3" data-i18n="o.2t">Осмотр и расчёт</h3><p data-i18n="o.2d">Инженер приедет в день обращения, бесплатно</p></li>
+      <li><span class="n">03</span><h3 class="h3" data-i18n="o.3t">Работы</h3><p data-i18n="o.3d">От 2 до 7 рабочих дней</p></li>
+      <li><span class="n">04</span><h3 class="h3" data-i18n="o.5t">Гарантия</h3><p data-i18n="o.5d">От 6 месяцев до 5 лет</p></li>
+    </ol>
+
+    <div class="cta" id="zayavka">
+      <div class="cta-txt">
+        <span class="chip" data-i18n="f.chip">Выезд и расчёт - бесплатно</span>
+        <h2 class="h2" data-i18n="f.h2">Вызвать инженера</h2>
+        <p data-i18n="f.lead">Оставьте телефон - оператор перезвонит и согласует время выезда.</p>
+      </div>
+      <form class="form" novalidate>
+        <label class="fld"><span data-i18n="f.name">Имя</span><input type="text" name="name" autocomplete="name" required></label>
+        <label class="fld"><span data-i18n="f.phone">Телефон</span><input type="tel" name="phone" id="f-phone" autocomplete="tel" inputmode="tel" placeholder="+7" required></label>
+        <label class="fld fld-w"><span data-i18n="f.what">Что требуется (необязательно)</span><input type="text" name="what"></label>
+        <button class="pill pill-blue pill-lg" type="submit"><span data-i18n="f.send">Отправить заявку</span><svg width="18" height="18"><use href="#ic-arr"/></svg></button>
+        <p class="form-ok" role="status" hidden data-i18n="f.ok">Заявка отправлена. Оператор свяжется с вами.</p>
+      </form>
     </div>
   </div>
 </section>
 
-<!-- ================= КОМПАНИЯ ================= -->
-<section class="sec sec-co" id="kompaniya">
-  <div class="wrap co">
-    <div class="co-txt">
-      <p class="kicker" data-i18n="k.kicker">Компания</p>
-      <h2 class="h2" data-i18n="k.h2" data-split>Кто выполняет работы</h2>
-      <p class="lead" data-i18n="k.lead">ADM Service - зарегистрированный индивидуальный предприниматель. Реквизиты указаны в подвале сайта.</p>
-      <ul class="pts">
-        <li><svg width="28" height="14"><use href="#ic-wind"/></svg><span data-i18n="k.1">Свои инженеры и мастера, три бригады</span></li>
-        <li><svg width="28" height="14"><use href="#ic-wind"/></svg><span data-i18n="k.2">Мастера работают в фирменной одежде</span></li>
-        <li><svg width="28" height="14"><use href="#ic-wind"/></svg><span data-i18n="k.3">Мастер показывает документы компании</span></li>
-        <li><svg width="28" height="14"><use href="#ic-wind"/></svg><span data-i18n="k.4">Заказчики отмечают чистоту на объекте, аккуратность и вежливость мастеров</span></li>
-      </ul>
-      <a class="btn btn-dark btn-lg" href="tel:+77775639425"><svg width="20" height="20"><use href="#ic-tel"/></svg><span data-i18n="c.call">Позвонить</span></a>
-    </div>
-    <div class="co-media">
-      <svg class="co-frame" viewBox="0 0 600 640" preserveAspectRatio="none" aria-hidden="true"><path d="M2 2h596v636H2ZM300 2v636M2 330h298M300 250h298"/></svg>
-      <figure class="pane p1" data-par="-30"><img src="assets/photos/foto-30.webp" alt="Мастер ADM Service на монтаже перегородки" loading="lazy" width="900" height="1600"></figure>
-      <figure class="pane p2" data-par="20"><img src="assets/photos/foto-72.webp" alt="Монтаж штапика шуруповёртом" loading="lazy" width="718" height="1599"></figure>
-      <figure class="pane p3" data-par="-12"><img src="assets/photos/foto-75.webp" alt="Бригада и стеклопакеты на объекте" loading="lazy" width="718" height="1599"></figure>
-      <figure class="pane p4" data-par="34"><img src="assets/photos/foto-71.webp" alt="Замена стеклопакета" loading="lazy" width="718" height="1599"></figure>
-    </div>
-  </div>
-</section>
-
-<!-- ================= ОБЪЕКТЫ ================= -->
-<section class="sec sec-obj" id="obekty">
-  <div class="obj-grid" aria-hidden="true"></div>
+<!-- КОНТАКТЫ -->
+<section class="sec sec-dark" id="kontakty">
   <div class="wrap">
-    <header class="head head-dark">
-      <p class="kicker" data-i18n="ob.kicker">Объекты</p>
-      <h2 class="h2" data-i18n="ob.h2" data-split>Выполненные объекты</h2>
-      <p class="lead" data-i18n="ob.lead">Более 1000 выполненных объектов и 5&nbsp;000&nbsp;м² остекления. Среди заказчиков - супермаркет SMALL, ЖД вокзал, посёлок Родина.</p>
-      <div class="obj-nav">
-        <button class="arr prev" type="button" aria-label="Предыдущий объект" data-i18n-aria="ob.prev" disabled><svg width="22" height="22"><use href="#ic-arr"/></svg></button>
-        <button class="arr next" type="button" aria-label="Следующий объект" data-i18n-aria="ob.next"><svg width="22" height="22"><use href="#ic-arr"/></svg></button>
-      </div>
-    </header>
-  </div>
-
-  <div class="obj-view" tabindex="0">
-    <div class="obj-track">
-
-      <article class="case case-v">
-        <div class="case-media">
-          <div class="cmp" style="--p:50%">
-            <img class="cmp-b" src="assets/photos/plate-48.webp" alt="Готовый тамбур супермаркета SMALL" loading="lazy" width="718" height="1599">
-            <img class="cmp-a" src="assets/photos/foto-51.webp" alt="Каркас тамбура супермаркета SMALL" loading="lazy" width="718" height="1599">
-            <span class="tag tag-a" data-i18n="ob.1a">Каркас</span><span class="tag tag-b" data-i18n="ob.1b">Готовый тамбур</span>
-            <span class="cmp-h"><i></i></span>
-            <input class="cmp-r" type="range" min="0" max="100" value="50" aria-label="Каркас / Готовый тамбур">
-          </div>
-          <figure class="side s1"><img src="assets/photos/card-44.webp" alt="Вход супермаркета SMALL с готовым тамбуром" loading="lazy" width="1600" height="718"></figure>
-          <figure class="side s2"><img src="assets/photos/foto-47.webp" alt="Монтаж каркаса тамбура" loading="lazy" width="1600" height="718"></figure>
-        </div>
-        <div class="case-txt">
-          <h3 class="case-t" data-i18n="ob.1t">Супермаркет SMALL</h3>
-          <p class="case-d" data-i18n="ob.1d">Входной тамбур из алюминиевого профиля.</p>
-        </div>
-      </article>
-
-      <article class="case case-v">
-        <div class="case-media">
-          <div class="cmp" style="--p:50%">
-            <img class="cmp-b" src="assets/photos/foto-63.webp" alt="Новые входные двери ресторана" loading="lazy" width="718" height="1599">
-            <img class="cmp-a" src="assets/photos/foto-64.webp" alt="Вход ресторана до замены дверей" loading="lazy" width="718" height="1599">
-            <span class="tag tag-a" data-i18n="ob.2a">До</span><span class="tag tag-b" data-i18n="ob.2b">После</span>
-            <span class="cmp-h"><i></i></span>
-            <input class="cmp-r" type="range" min="0" max="100" value="50" aria-label="До / После">
-          </div>
-          <figure class="side s3"><img src="assets/photos/hero-62.webp" alt="Входные двери ресторана вечером" loading="lazy" width="718" height="1599"></figure>
-        </div>
-        <div class="case-txt">
-          <h3 class="case-t" data-i18n="ob.2t">Вход ресторана</h3>
-          <p class="case-d" data-i18n="ob.2d">Замена входных дверей.</p>
-        </div>
-      </article>
-
-      <article class="case case-h">
-        <div class="case-media">
-          <div class="cmp" style="--p:50%">
-            <img class="cmp-b" src="assets/photos/card-11.webp" alt="ЖД вокзал: новые окна и утепление фасада, ход работ" loading="lazy" width="1600" height="900">
-            <img class="cmp-a" src="assets/photos/trust-19.webp" alt="ЖД вокзал до начала работ" loading="lazy" width="1600" height="718">
-            <span class="tag tag-a" data-i18n="ob.3a">До начала работ</span><span class="tag tag-b" data-i18n="ob.3b">Ход работ</span>
-            <span class="cmp-h"><i></i></span>
-            <input class="cmp-r" type="range" min="0" max="100" value="50" aria-label="До начала работ / Ход работ">
-          </div>
-          <figure class="side s4"><img src="assets/photos/foto-13.webp" alt="Оконные проёмы вокзала до установки окон" loading="lazy" width="1600" height="718"></figure>
-          <figure class="side s5"><img src="assets/photos/foto-14.webp" alt="Новые окна в проёмах вокзала" loading="lazy" width="1600" height="718"></figure>
-        </div>
-        <div class="case-txt">
-          <h3 class="case-t" data-i18n="ob.3t">ЖД вокзал</h3>
-          <p class="case-d" data-i18n="ob.3d">Замена окон и утепление фасада.</p>
-        </div>
-      </article>
-
-      <article class="case case-h">
-        <div class="case-media">
-          <div class="cmp" style="--p:50%">
-            <img class="cmp-b" src="assets/photos/plate-26.webp" alt="Готовые офисные перегородки из алюминиевого профиля и стекла" loading="lazy" width="1600" height="718">
-            <img class="cmp-a" src="assets/photos/foto-32.webp" alt="Каркас офисной перегородки" loading="lazy" width="1600" height="718">
-            <span class="tag tag-a" data-i18n="ob.4a">Каркас</span><span class="tag tag-b" data-i18n="ob.4b">Готовые перегородки</span>
-            <span class="cmp-h"><i></i></span>
-            <input class="cmp-r" type="range" min="0" max="100" value="50" aria-label="Каркас / Готовые перегородки">
-          </div>
-          <figure class="side s4"><img src="assets/photos/plate-22.webp" alt="Перегородка в зале" loading="lazy" width="1600" height="718"></figure>
-          <figure class="side s5"><img src="assets/photos/card-29.webp" alt="Перегородка с дверью" loading="lazy" width="1600" height="718"></figure>
-        </div>
-        <div class="case-txt">
-          <h3 class="case-t" data-i18n="ob.4t">Офисные перегородки</h3>
-          <p class="case-d" data-i18n="ob.4d">Офисные перегородки из алюминиевого профиля и стекла.</p>
-        </div>
-      </article>
-
-    </div>
-  </div>
-
-  <div class="wrap obj-foot">
-    <div class="obj-dots" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
-    <a class="btn btn-ghost" href="https://www.instagram.com/service.adm/" target="_blank" rel="noopener"><svg width="18" height="18"><use href="#ic-ig"/></svg><span data-i18n="ob.ig">Больше объектов в Instagram</span></a>
-  </div>
-</section>
-
-<!-- ================= ОРГАНИЗАЦИЯМ ================= -->
-<section class="sec sec-org" id="organizaciyam">
-  <div class="wrap org">
-    <div class="org-media">
-      <figure class="om m1" data-par="-26"><img src="assets/photos/foto-67.webp" alt="Работы на высоте: монтаж витража фасада" loading="lazy" width="718" height="1599"></figure>
-      <figure class="om m2" data-par="22"><img src="assets/photos/card-69.webp" alt="Витраж фасада после работ" loading="lazy" width="718" height="1599"></figure>
-      <figure class="om m3" data-par="-10"><img src="assets/photos/plate-70.webp" alt="Алюминиевые перегородки в автосервисе" loading="lazy" width="1600" height="718"></figure>
-      <svg class="org-wind" viewBox="0 0 600 200" preserveAspectRatio="none" aria-hidden="true"><path d="M-10 60c90-40 150 30 250 0s160 30 260 0 80 10 110 0M-10 140c90-40 150 30 250 0s160 30 260 0 80 10 110 0"/></svg>
-    </div>
-    <div class="org-txt">
-      <p class="kicker" data-i18n="g.kicker">Организациям</p>
-      <h2 class="h2" data-i18n="g.h2" data-split>Обслуживание окон и дверей для бизнеса и организаций</h2>
-      <p class="lead" data-i18n="g.lead">Ремонтируем и обслуживаем окна, двери, витражи и перегородки в магазинах, офисах и общественных зданиях.</p>
-      <ul class="rows">
-        <li data-i18n="g.1">Годовое обслуживание</li>
-        <li data-i18n="g.2">Бригада альпинистов для работ на высоте</li>
-        <li data-i18n="g.3">Короткие сроки исполнения</li>
-      </ul>
-      <a class="btn btn-dark btn-lg js-wa" data-wa="wa.org" data-wa-text="Здравствуйте! Интересует обслуживание окон и дверей для организации. Объект:" href="https://wa.me/77775639425" target="_blank" rel="noopener"><svg width="20" height="20"><use href="#ic-wa"/></svg><span data-i18n="g.btn">Обсудить объект</span></a>
-    </div>
-  </div>
-</section>
-
-<!-- ================= КОНТАКТЫ ================= -->
-<section class="sec sec-ct" id="kontakty">
-  <canvas class="ct-wind" aria-hidden="true"></canvas>
-  <div class="wrap ct">
-    <div class="ct-txt">
+    <header class="head">
       <p class="kicker" data-i18n="ct.kicker">Контакты</p>
-      <h2 class="h2" data-i18n="ct.h2" data-split>Вызов инженера на осмотр и расчёт</h2>
-      <p class="lead" data-i18n="ct.lead">Оставьте номер телефона - оператор свяжется с вами и согласует время выезда.</p>
-      <dl class="ct-list">
-        <div><dt data-i18n="ct.tel">Телефон и WhatsApp</dt><dd><a href="tel:+77775639425">+7 777 563 94 25</a></dd></div>
-        <div><dt>Email</dt><dd><a href="mailto:adm.service.pro@gmail.com">adm.service.pro@gmail.com</a></dd></div>
-        <div><dt data-i18n="ct.addr-k">Адрес</dt><dd data-i18n="ct.addr">Астана, ул. Бейбитшилик, 18, офис 305</dd></div>
-        <div><dt data-i18n="ct.time-k">График</dt><dd data-i18n="ct.time">ежедневно с 9:00 до 20:00</dd></div>
-      </dl>
-      <div class="ct-btns">
-        <a class="btn btn-white" href="tel:+77775639425"><svg width="18" height="18"><use href="#ic-tel"/></svg><span data-i18n="c.call">Позвонить</span></a>
-        <a class="btn btn-wa js-wa" data-wa="wa.hero" data-wa-text="Здравствуйте! Нужен ремонт окон. Прошу согласовать выезд инженера на осмотр и расчёт." href="https://wa.me/77775639425" target="_blank" rel="noopener"><svg width="18" height="18"><use href="#ic-wa"/></svg><span data-i18n="c.wa">Написать в WhatsApp</span></a>
-        <a class="btn btn-ghost" href="https://www.instagram.com/service.adm/" target="_blank" rel="noopener"><svg width="18" height="18"><use href="#ic-ig"/></svg><span data-i18n="c.ig">Работы в Instagram</span></a>
-        <a class="btn btn-ghost" href="https://2gis.kz/astana/firm/70000001118016771" target="_blank" rel="noopener"><span data-i18n="ct.2gis">Открыть в 2ГИС</span><svg width="18" height="18"><use href="#ic-arr"/></svg></a>
-      </div>
+      <h2 class="h2" data-i18n="ct.h2">Приезжайте или звоните</h2>
+    </header>
+    <div class="ct-card">
+      <div><b data-i18n="ct.city">Астана</b><span data-i18n="ct.addr">ул. Бейбитшилик, 18, офис 305</span></div>
+      <div><b data-i18n="ct.time-k">Ежедневно</b><span data-i18n="ct.time">с 9:00 до 20:00</span></div>
     </div>
-
-    <form class="form" id="zayavka" novalidate>
-      <svg class="form-seal" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><rect x=".6" y=".6" width="98.8" height="98.8" rx="3" pathLength="1"/></svg>
-      <label class="fld"><span data-i18n="f.name">Имя</span><input type="text" name="name" autocomplete="name" required></label>
-      <label class="fld"><span data-i18n="f.phone">Телефон</span><input type="tel" name="phone" id="f-phone" autocomplete="tel" inputmode="tel" placeholder="+7" required></label>
-      <label class="fld"><span data-i18n="f.what">Что требуется (необязательно)</span><textarea name="what" rows="3"></textarea></label>
-      <button class="btn btn-tif btn-lg" type="submit"><span data-i18n="f.send">Отправить заявку</span><svg width="20" height="20"><use href="#ic-arr"/></svg></button>
-      <p class="form-ok" role="status" hidden data-i18n="f.ok">Заявка отправлена. Оператор свяжется с вами.</p>
-    </form>
+    <div class="ct-pills">
+      <a class="pill pill-ghost" href="tel:+77775639425"><svg width="16" height="16"><use href="#ic-tel"/></svg><span>+7 777 563 94 25</span></a>
+      <a class="pill pill-wa js-wa" data-wa="wa.hero" data-wa-text="Здравствуйте! Нужен ремонт окон. Прошу согласовать выезд инженера на осмотр и расчёт." href="https://wa.me/77775639425" target="_blank" rel="noopener"><svg width="16" height="16"><use href="#ic-wa"/></svg><span>WhatsApp</span></a>
+      <a class="pill pill-ghost" href="https://www.instagram.com/service.adm/" target="_blank" rel="noopener"><svg width="16" height="16"><use href="#ic-ig"/></svg><span>@service.adm</span></a>
+      <a class="pill pill-ghost" href="mailto:adm.service.pro@gmail.com"><span>adm.service.pro@gmail.com</span></a>
+      <a class="pill pill-ghost" href="https://2gis.kz/astana/firm/70000001118016771" target="_blank" rel="noopener"><span data-i18n="ct.2gis">Открыть в 2ГИС</span><svg width="16" height="16"><use href="#ic-arr"/></svg></a>
+    </div>
   </div>
 </section>
 
@@ -651,29 +390,21 @@
 
 <footer class="ftr">
   <div class="wrap ftr-in">
-    <a class="logo" href="#top" aria-label="ADM Service"><img src="assets/img/logo.svg?v=2" alt="ADM Service" width="184" height="100" loading="lazy"></a>
-    <div class="ftr-col">
-      <p><b data-i18n="ft.ip">ИП ADM Service · ИИН 950816451639</b></p>
-      <p data-i18n="ft.what">Ремонт и обслуживание окон и дверей ПВХ и алюминия в Астане</p>
-    </div>
-    <div class="ftr-col">
-      <p data-i18n="ft.addr">Астана, ул. Бейбитшилик, 18, офис 305 · ежедневно с 9:00 до 20:00</p>
-      <p><a href="tel:+77775639425">+7 777 563 94 25</a> · <a href="mailto:adm.service.pro@gmail.com">adm.service.pro@gmail.com</a></p>
-    </div>
-    <a class="ftr-ig" href="https://www.instagram.com/service.adm/" target="_blank" rel="noopener"><svg width="22" height="22"><use href="#ic-ig"/></svg><span>@service.adm</span></a>
+    <a class="logo" href="#top" aria-label="ADM Service"><img src="assets/img/logo-adm-w.svg?v=1" alt="ADM" width="102" height="30" loading="lazy"></a>
+    <p data-i18n="ft.ip">ИП ADM Service · ИИН 950816451639</p>
+    <p data-i18n="ft.what">Ремонт и обслуживание окон и дверей ПВХ и алюминия в Астане</p>
   </div>
 </footer>
 
 <nav class="mbar" aria-label="Связаться" data-i18n-aria="mbar.aria">
-  <a href="tel:+77775639425"><svg width="20" height="20"><use href="#ic-tel"/></svg><span data-i18n="c.call">Позвонить</span></a>
-  <a class="js-wa" data-wa="wa.hero" data-wa-text="Здравствуйте! Нужен ремонт окон. Прошу согласовать выезд инженера на осмотр и расчёт." href="https://wa.me/77775639425" target="_blank" rel="noopener"><svg width="20" height="20"><use href="#ic-wa"/></svg><span>WhatsApp</span></a>
-  <a class="mbar-ig" href="https://www.instagram.com/service.adm/" target="_blank" rel="noopener" aria-label="Работы ADM Service в Instagram" data-i18n-aria="hdr.ig"><svg width="24" height="24"><use href="#ic-ig"/></svg></a>
+  <a class="mb-wa js-wa" data-wa="wa.hero" data-wa-text="Здравствуйте! Нужен ремонт окон. Прошу согласовать выезд инженера на осмотр и расчёт." href="https://wa.me/77775639425" target="_blank" rel="noopener"><svg width="18" height="18"><use href="#ic-wa"/></svg><span>WhatsApp</span></a>
+  <a class="mb-tel" href="tel:+77775639425"><svg width="18" height="18"><use href="#ic-tel"/></svg><span data-i18n="c.call">Позвонить</span></a>
+  <a class="mb-ig" href="https://www.instagram.com/service.adm/" target="_blank" rel="noopener" aria-label="Работы ADM Service в Instagram" data-i18n-aria="hdr.ig"><svg width="22" height="22"><use href="#ic-ig"/></svg></a>
 </nav>
 
 <script src="assets/vendor/gsap.min.js" defer></script>
 <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
-<script src="assets/vendor/SplitText.min.js" defer></script>
 <script src="assets/vendor/lenis.min.js" defer></script>
-<script src="script.js?v=20261121-2" defer></script>
+<script src="script.js?v=20261123-2" defer></script>
 </body>
 </html>
