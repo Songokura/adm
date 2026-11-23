@@ -151,6 +151,17 @@
     $$('.cmp-r', box).forEach(function (r) {
       var cmp = r.parentNode;
       r.addEventListener('input', function () { r.touched = true; cmp.style.setProperty('--p', r.value + '%'); });
+      /* шторка пальцем и мышью по всему кадру: свайп вбок двигает, вертикальный - листает страницу */
+      var drag = false, sx = 0, sy = 0, decided = false;
+      function setX(x) { var b = cmp.getBoundingClientRect(), v = Math.max(0, Math.min(100, (x - b.left) / b.width * 100)); r.touched = true; r.value = v; cmp.style.setProperty('--p', v + '%'); }
+      cmp.addEventListener('pointerdown', function (e) { drag = true; decided = e.pointerType === 'mouse'; sx = e.clientX; sy = e.clientY; if (decided) { setX(e.clientX); cmp.setPointerCapture(e.pointerId); } });
+      cmp.addEventListener('pointermove', function (e) {
+        if (!drag) return;
+        if (!decided) { var dx = Math.abs(e.clientX - sx), dy = Math.abs(e.clientY - sy); if (dx < 6 && dy < 6) return; if (dy > dx) { drag = false; return; } decided = true; try { cmp.setPointerCapture(e.pointerId); } catch (er) {} }
+        setX(e.clientX);
+      });
+      function end(e) { if (drag && !decided && e.type === 'pointerup') setX(e.clientX); drag = false; }
+      cmp.addEventListener('pointerup', end); cmp.addEventListener('pointercancel', end);
     });
     if (!hasGsap || RM || !('IntersectionObserver' in window)) return;
     var io = new IntersectionObserver(function (en) {
