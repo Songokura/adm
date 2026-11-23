@@ -28,7 +28,7 @@
     ariaEls.forEach(function (e) { var k = e.getAttribute('data-i18n-aria'); e.setAttribute('aria-label', tr(k, RUA[k])); });
     document.documentElement.lang = lang;
     $$('.lang button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-lang') === lang)); });
-    setWa();
+    setWa(); if (typeof liveRender === 'function') liveRender();
     if (hasGsap) ScrollTrigger.refresh();
   }
   function loadKk(cb) {
@@ -83,6 +83,34 @@
     if (hasGsap && !RM) gsap.from('.mmenu-nav a, .mmenu-btns .pill', { y: 18, opacity: 0, duration: 0.35, ease: 'power2.out', stagger: 0.03 });
   });
   window.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(); });
+
+  /* ---------- за окном: погода Астаны и часы работы ---------- */
+  var WX = null;
+  var LIVE_RU = { cold: 'В такую погоду продувание заметнее всего - приедем в день обращения.', warm: 'Удобное время отрегулировать окна и заменить уплотнитель до холодов.', open: 'Принимаем заявки до 20:00', closed: 'Начинаем работу в 9:00' };
+  function liveRender() {
+    var t = $('.temp'), lv = $('.live'); if (!lv) return;
+    var now = new Date(), h = (now.getUTCHours() + 5) % 24, open = h >= 9 && h < 20;
+    var msg = tr('live.' + (open ? 'open' : 'closed'), LIVE_RU[open ? 'open' : 'closed']);
+    if (WX) {
+      var cold = WX.t <= 3 || WX.w >= 7;
+      msg += '. ' + tr('live.' + (cold ? 'cold' : 'warm'), LIVE_RU[cold ? 'cold' : 'warm']);
+      $('.temp-v', t).textContent = (WX.t > 0 ? '+' : WX.t < 0 ? '−' : '') + Math.abs(WX.t) + '° · ' + tr('w.wind', 'ветер') + ' ' + WX.w + ' ' + tr('w.ms', 'м/с');
+      t.hidden = false;
+    }
+    lv.classList.toggle('closed', !open);
+    $('.live-t', lv).textContent = msg;
+    lv.hidden = false;
+  }
+  (function weather() {
+    liveRender();
+    if (!window.fetch) return;
+    var ctl = window.AbortController ? new AbortController() : null;
+    if (ctl) setTimeout(function () { ctl.abort(); }, 5000);
+    fetch('https://api.open-meteo.com/v1/forecast?latitude=51.17&longitude=71.45&current=temperature_2m,wind_speed_10m&wind_speed_unit=ms', ctl ? { signal: ctl.signal } : {})
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) { if (!d || !d.current) return; WX = { t: Math.round(d.current.temperature_2m), w: Math.round(d.current.wind_speed_10m) }; liveRender(); })
+      .catch(function () {});
+  })();
 
   /* ---------- окно героя: верхняя створка откидывается ---------- */
   (function tilt() {
