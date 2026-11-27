@@ -174,6 +174,18 @@
     $$('.cmp', box).forEach(function (c) { io.observe(c); });
   })();
 
+  /* ---------- конверсии Google Ads ---------- */
+  function fireConv(key) {
+    if (typeof window.gtag_report_conversion !== 'function' || !window.AW_CONV) return;
+    var sendTo = window.AW_CONV[key];
+    if (sendTo) window.gtag_report_conversion(undefined, sendTo);
+  }
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href^="tel:"], a[href*="wa.me"], a[href^="mailto:"]') : null;
+    if (!a) return;
+    fireConv(a.getAttribute('href').indexOf('tel:') === 0 ? 'phone' : 'contact');
+  });
+
   /* ---------- форма ---------- */
   (function form() {
     var f = $('.form'); if (!f) return;
@@ -184,6 +196,7 @@
       if (!ok) return;
       var txt = tr('f.wa.head', FORM_RU.head) + ' ' + tr('f.name', FORM_RU.name) + ': ' + name.value.trim() + '. ' + tr('f.phone', FORM_RU.phone) + ': ' + phone.value.trim() + '.';
       if (what.value.trim()) txt += ' ' + tr('f.wa.what', FORM_RU.what) + ': ' + what.value.trim();
+      fireConv('form');
       window.open(WA + '?text=' + encodeURIComponent(txt), '_blank', 'noopener');
       $('.form-ok', f).hidden = false;
     });
